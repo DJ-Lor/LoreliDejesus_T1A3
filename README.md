@@ -7,6 +7,7 @@
 * Manage Property List
 * Manage Client List
 * Seller Portal
+* Exit
 
 ***Manage - Property List for sale***
 
