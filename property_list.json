@@ -1,0 +1,34 @@
+[
+    {
+        "Property_ID": 0,
+        "Suburb": "Bondi",
+        "Price": 850000,
+        "Number_of_Bed": 3,
+        "Number_of_Car_Space": 1
+    },
+    {
+        "Property_ID": 0,
+        "Suburb": "Coogee",
+        "Price": 950000,
+        "Number_of_Bed": 4,
+        "Number_of_Car_Space": 2
+    },
+    {
+        "Property_ID": 0,
+        "Suburb": "Randwick",
+        "Price": 650000,
+        "Number_of_Bed": 1,
+        "Number_of_Car_Space": 1
+    },
+    {
+        "Property_ID": 0,
+        "Suburb": "Bondi",
+        "Price": 1050000,
+        "Number_of_Bed": 4,
+        "Number_of_Car_Space": 2
+    }
+]
+
+
+
+
