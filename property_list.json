@@ -23,12 +23,8 @@
     {
         "Property_ID": 0,
         "Suburb": "Bondi",
-        "Price": 1050000,
-        "Number_of_Bed": 4,
-        "Number_of_Car_Space": 2
+        "Price": 890000,
+        "Number_of_Bed": 2,
+        "Number_of_Car_Space": 1
     }
 ]
-
-
-
-
