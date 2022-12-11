@@ -2,26 +2,20 @@
 from property import Property
 from client import Client
 
-# Ask for user input
-suburb = input("Please enter the suburb of the new property: ")
-price = int(input("Please enter the selling price of the new property: "))
+# # Ask for user input
+# suburb = input("Please enter the suburb of the new property: ")
+# price = int(input("Please enter the selling price of the new property: "))
 
-# Create property
-p1 = Property(suburb, price)
-# Save property to file
-p1.property_save()
-
-property_id = int(input("Property id: "))
-p2 = Property()
-p2.remove
-
-#_________________
+# # # Create property
+# p1 = Property(suburb, price)
+# # # Save property to file
+# p1.property_save()
 
 # Ask for user input
-suburb = input("Please enter the suburb of the new property: ")
-price = int(input("Please enter the selling price of the new property: "))
+ID = int(input("Property ID: "))
+# # Delete a property from file
+p2 = Property(ID)
+# print(p2)
+# # Save updated file
+p2.property_remove()
 
-# Create property
-p1 = Property(suburb, price)
-# Save property to file
-p1.property_save()

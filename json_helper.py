@@ -24,12 +24,17 @@ def remove_data_json(ID, filename):
         raise Exception("File not found")
 
     # Read JSON file and load data into list
-    # Remove element from list
-    # Point to top of file
-    # Replace all objects in file with the updated list
-    with open(filename, 'r+') as fp:
-        listObj = []
+    listObj = []
+    with open(filename, 'r') as fp:
         listObj = json.load(fp)
-        # listObj. delete object that has the same ID - WRITE
-        fp.seek(0)
-        json.dump(listObj, fp, indent=4, separators=(',',': '))
+
+    # Remove element from list
+    for index, obj in enumerate(listObj):
+        if obj["ID"] == ID:
+            listObj.pop(index)
+            break
+    
+    # Replace all objects in file with the updated list
+    with open(filename, 'w') as wp:
+        json.dump(listObj, wp, indent=4, separators=(',',': '))
+
