@@ -43,3 +43,8 @@
 ***Seller Portal***
 
 * Able to Pick a Client ID or First/Last name and will provide a list of available properties for sale within the client's requirements (dictionary)
+
+Notes:
+1. Can only enter name for client
+2. Can only input one suburb
+3. No range - is it possible 

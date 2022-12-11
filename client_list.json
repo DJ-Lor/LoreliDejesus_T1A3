@@ -1,11 +1,8 @@
 [
     {
         "ID": 0,
-        "Suburb": ["Bondi", "Randwick"],
+        "name": "David",
+        "Suburb": "Bondi",
         "Price": 830000
     }
 ]
-
-
-
-

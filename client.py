@@ -4,16 +4,17 @@ from json_helper import write_json, remove_data_json
 filename = 'client_list.json'
 
 class Client:
-    def __init__(self, suburb, price):
-        self.property_ID = 12346
+    def __init__(self, name = '', suburb = '', price = '', ID = ''):
+        self.ID = 12345
+        self.name = name
         self.suburb = suburb
         self.price = price
   
     def client_save(self):
         write_json(self.__dict__, filename)
-
-    def client_remove(ID):
-        remove_data_json(ID, filename)
+    
+    def client_remove(self):
+        remove_data_json(self.ID, filename)
 
 
 
