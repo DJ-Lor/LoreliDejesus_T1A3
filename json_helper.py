@@ -53,16 +53,13 @@ def edit_data_json(ID, filename):
     # Show elements from list
     for index, obj in enumerate(listObj):
         if obj["ID"] == ID:
-            edit = input(f"Which client detail would you like to edit?\n {listObj[index]}\n Enter here: ")
+            edit = input(f"Which detail would you like to edit?\n {listObj[index]}\n Enter here: ")
             edit = edit.upper()
             new_value = input(f"Please enter the new {edit}: ")
             (listObj[index])[edit] = new_value
             print(f"{edit} updated to {new_value}!")
-          
-                
-                
-
-      # Replace all objects in file with the updated list
+            
+    # Replace all objects in file with the updated list
     with open(filename, 'w') as wp:
         json.dump(listObj, wp, indent=4, separators=(',',': '))
 

@@ -44,6 +44,10 @@ from client import Client
 
 # Ask for user input
 
-ID = int(input("Client ID: "))
-c3 = Client(ID)
-c3.client_edit()
+# ID = int(input("Client ID: "))
+# c3 = Client(ID)
+# c3.client_edit()
+
+ID = int(input("Property ID: "))
+p3 = Property(ID)
+p3.property_edit()

@@ -1,4 +1,4 @@
-from json_helper import write_json, remove_data_json
+from json_helper import write_json, remove_data_json, edit_data_json
 
 # "Database File Location"
 filename = 'property_list.json'
@@ -14,6 +14,9 @@ class Property:
     
     def property_remove(self):
         remove_data_json(self.ID, filename)
+
+    def property_edit(self):
+        edit_data_json(self.ID, filename)
 
 
 

@@ -10,7 +10,7 @@ while True:
 
     # Manage Property option
     if user_input == "1":
-        manage_prop_choice = input("Would you like to\n 1. Add a new property to list\n 2. Edit a current property on the list\n 3. Delete a property on the list\n 4. Exit\n Please enter a number: ")
+        manage_prop_choice = input("What would you like to do?\n 1. Add a new property to list\n 2. Edit a current property on the list\n 3. Delete a property on the list\n 4. Exit\n Please enter a number: ")
         manage_prop_choice = manage_prop_choice.strip()
 
     # Add a new Property to the list
@@ -59,7 +59,7 @@ while True:
 
         user_input = user_input.strip()
 
-        manage_client_choice = input("Would you like to\n 1. Add a new client\n 2. Edit current client details on the list\n 3. Delete a client on the list\n 4. Exit\n Please enter a number: ")
+        manage_client_choice = input("What would you like to do?\n 1. Add a new client\n 2. Edit current client details on the list\n 3. Delete a client on the list\n 4. Exit\n Please enter a number: ")
         manage_client_choice = manage_client_choice.strip()
 
     # Add a new client to the list 
@@ -78,8 +78,17 @@ while True:
             else:
                 break
 
+    # Edit client details
         elif manage_client_choice == "2":
-            break
+            ID = int(input("Client ID: "))
+            c3 = Client(ID)
+            c3.client_edit()
+            next_step = input("Would you like to go back to the 1. Main portal or 2. Exit?\n Choose a number. ")
+            if next_step == "1":
+                continue
+            else:
+                break
+
         elif manage_client_choice == "3":
             ID = int(input("Client ID: "))
             confirm_action = input(f"Are you sure you want to delete client {ID} from the list? Y/N:  ")
