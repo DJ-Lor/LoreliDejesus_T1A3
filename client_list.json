@@ -2,6 +2,7 @@
     {
         "ID": 0,
         "name": "David",
+        "email": "david@gmail.com",
         "Suburb": "Bondi",
         "Price": 830000
     }

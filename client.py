@@ -4,9 +4,10 @@ from json_helper import write_json, remove_data_json
 filename = 'client_list.json'
 
 class Client:
-    def __init__(self, name = '', suburb = '', price = '', ID = 12345):
+    def __init__(self, name = '', email = '', suburb = '', price = '', ID = 12345):
         self.ID = ID
         self.name = name
+        self.email = email
         self.suburb = suburb
         self.price = price
   

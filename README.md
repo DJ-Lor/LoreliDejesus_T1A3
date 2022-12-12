@@ -48,3 +48,4 @@ Notes:
 1. Can only enter name for client
 2. Can only input one suburb
 3. No range - is it possible 
+4. Need to spit out client ID or property ID once added? 

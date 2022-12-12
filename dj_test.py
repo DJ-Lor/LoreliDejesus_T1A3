@@ -24,11 +24,12 @@ from client import Client
 
 # # # # Ask for user input
 # name = input("Please enter the new client name: ")
+# email = input("Please enter the client's email address: ")
 # suburb = input("Please enter the client suburb of interest: ")
 # price = int(input("Please enter the client property budget: "))
 
 # # # # Create client
-# c1 = Client(name, suburb, price)
+# c1 = Client(name, email, suburb, price)
 # # # # # Save client to file
 # c1.client_save()
 
