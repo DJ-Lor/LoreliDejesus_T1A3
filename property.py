@@ -4,7 +4,7 @@ from json_helper import write_json, remove_data_json
 filename = 'property_list.json'
 
 class Property:
-    def __init__(self, ID= 12345, suburb = '', price = ''):
+    def __init__(self, suburb = '', price = '', ID = 12345):
         self.ID = ID
         self.suburb = suburb
         self.price = price

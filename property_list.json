@@ -13,10 +13,5 @@
         "ID": 0,
         "Suburb": "Randwick",
         "Price": 650000
-    },
-    {
-        "ID": 12345,
-        "Suburb": "Bondi",
-        "Price": 890000
     }
 ]
