@@ -38,3 +38,33 @@ def remove_data_json(ID, filename):
     with open(filename, 'w') as wp:
         json.dump(listObj, wp, indent=4, separators=(',',': '))
 
+
+
+def edit_data_json(ID, filename):
+    # Check if file exists
+    if path.isfile(filename) is False:
+        raise Exception("File not found")
+
+    # Read JSON file and load data into list
+    listObj = []
+    with open(filename, 'r') as fp:
+        listObj = json.load(fp)
+
+    # Show elements from list
+    for index, obj in enumerate(listObj):
+        if obj["ID"] == ID:
+            edit = input(f"Which client detail would you like to edit?\n {listObj[index]}\n Enter here: ")
+            edit = edit.upper()
+            new_value = input(f"Please enter the new {edit}: ")
+            (listObj[index])[edit] = new_value
+            print(f"{edit} updated to {new_value}!")
+          
+                
+                
+
+      # Replace all objects in file with the updated list
+    with open(filename, 'w') as wp:
+        json.dump(listObj, wp, indent=4, separators=(',',': '))
+
+
+            

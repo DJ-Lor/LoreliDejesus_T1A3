@@ -1,9 +1,16 @@
 [
     {
         "ID": 0,
-        "name": "David",
-        "email": "david@gmail.com",
-        "Suburb": "Bondi",
-        "Price": 830000
+        "NAME": "David",
+        "EMAIL": "david@gmail.com",
+        "SUBURB": "Bondi",
+        "PRICE": 830000
+    },
+    {
+        "ID": 12345,
+        "NAME": "LDJ",
+        "EMAIL": "david@gmail.com",
+        "SUBURB": "Maroubra",
+        "PRICE": 830000
     }
 ]

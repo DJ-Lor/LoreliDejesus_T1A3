@@ -31,12 +31,19 @@ from client import Client
 # # # # Create client
 # c1 = Client(name, email, suburb, price)
 # # # # # Save client to file
-# c1.client_save()
+# # c1.client_save()
 
-# # Ask for user input
+# # # Ask for user input
+# ID = int(input("Client ID: "))
+
+# # # # # Delete a client ID from file
+# c2 = Client(ID)
+# # # # print(c2)
+# # # # # Save updated file
+# c2.client_remove()
+
+# Ask for user input
+
 ID = int(input("Client ID: "))
-# # # # Delete a client ID from file
-c2 = Client(ID)
-# # # print(c2)
-# # # # Save updated file
-c2.client_remove()
+c3 = Client(ID)
+c3.client_edit()

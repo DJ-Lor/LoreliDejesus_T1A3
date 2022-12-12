@@ -1,17 +1,17 @@
 [
     {
         "ID": 0,
-        "Suburb": "Bondi",
-        "Price": 850000
+        "suburb": "Bondi",
+        "price": 850000
     },
     {
         "ID": 0,
-        "Suburb": "Coogee",
-        "Price": 950000
+        "suburb": "Coogee",
+        "price": 950000
     },
     {
         "ID": 0,
-        "Suburb": "Randwick",
-        "Price": 650000
+        "suburb": "Randwick",
+        "price": 650000
     }
 ]

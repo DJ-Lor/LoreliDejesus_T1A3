@@ -1,4 +1,4 @@
-from json_helper import write_json, remove_data_json
+from json_helper import write_json, remove_data_json, edit_data_json
 
 # "Database File Location"
 filename = 'client_list.json'
@@ -16,6 +16,9 @@ class Client:
     
     def client_remove(self):
         remove_data_json(self.ID, filename)
+    
+    def client_edit(self):
+        edit_data_json(self.ID, filename)
 
 
 
