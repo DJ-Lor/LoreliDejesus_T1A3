@@ -28,7 +28,14 @@ while True:
 
     # Edit a current Property from the list
         elif manage_prop_choice == "2":
-            break
+            ID = int(input("Property ID: "))
+            p3 = Property(ID)
+            p3.property_edit()
+            next_step = input("Would you like to go back to the 1. Main portal or 2. Exit?\n Choose a number. ")
+            if next_step == "1":
+                continue
+            else:
+                break
 
     # Delete a current Property from the list 
         elif manage_prop_choice == "3":
