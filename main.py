@@ -126,9 +126,17 @@ while True:
             print("Invalid input. Please choose again")
 
     elif user_input == "3":
-        seller_portal_choice = input("Would you like to enter the\n 1. Client ID\n 2. Client Name")
+        seller_portal_choice = input("Would you like to enter the\n 1. Client ID\n 2. Property ID? ")
         if seller_portal_choice == "1":
-            seller_portal_choice = input("Please input the client ID. Enter here: ")
+            ID = int(input("Please input the client ID. Enter here: "))
+            c4 = Client('', '', '', 0, ID)
+            c4.client_search()
+            next_step = input("Would you like to go back to the 1. Main portal or 2. Exit?\n Choose a number. ")
+            if next_step == "1":
+                continue
+            else:
+                break
+            
         elif seller_portal_choice == "2":
             break
         else:
@@ -140,17 +148,3 @@ while True:
     else:
         print("INVALID ANSWER. Please choose a number from 1-4: ")
 
-
-
-#Enter client ID
-# #Pull up client information
-# #Match to the property list with property bondi for example - show 
-# #Pull up another one or exit
-
-#   {
-#         "ID": 12345,
-#         "NAME": "LDJ",
-#         "EMAIL": "david@gmail.com",
-#         "SUBURB": "Maroubra",
-#         "PRICE": "900000"
-#     }

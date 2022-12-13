@@ -105,24 +105,24 @@ def search_data_json(ID, filename1= 'client_list.json', filename2 = 'property_li
 
 
 
-    found_property = None
-    for pr in properties_list:
-        if pr["ID"] == ID:
-            found_property = pr
-            break
+    # found_property = None
+    # for pr in properties_list:
+    #     if pr["ID"] == ID:
+    #         found_property = pr
+    #         break
     
-    if found_property is None:
-        raise Exception("Property not found")
+    # if found_property is None:
+    #     raise Exception("Property not found")
 
-    print(found_property)
+    # print(found_property)
 
-    matched_clients_list = []
-    for cli in clients_list:
-        if (cli)["SUBURB"] == (found_property)["SUBURB"] and (cli)["PRICE"] <= (found_property)["PRICE"]:
-            matched_clients_list.append(cli)
+    # matched_clients_list = []
+    # for cli in clients_list:
+    #     if (cli)["SUBURB"] == (found_property)["SUBURB"] and (cli)["PRICE"] <= (found_property)["PRICE"]:
+    #         matched_clients_list.append(cli)
 
-    print('Here are a lits of clients for you:')
-    for mcl in matched_clients_list:
-        print(mcl)
+    # print('Here are a lits of clients for you:')
+    # for mcl in matched_clients_list:
+    #     print(mcl)
 
-        
+
