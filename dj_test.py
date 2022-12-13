@@ -1,6 +1,8 @@
-# Import my property class that has CRUD functions
+#Import my property class that has CRUD functions
 from property import Property
 from client import Client
+import json
+from os import path
 
 # # Ask for user input
 # suburb = input("Please enter the suburb of the new property: ")
@@ -52,7 +54,37 @@ from client import Client
 # p3 = Property(ID)
 # p3.property_edit()
 
-ID = int(input("Client ID: "))
-c4 = Client('', '', '', 0, ID)
-c4.client_search()
+# ID = int(input("Client ID: "))
+# c4 = Client('', '', '', 0, ID)
+# c4.client_search()
    
+
+
+
+# Read JSON file and load data into list
+# Append new dict to list
+# Point to top of file
+# # Replace all objects in file with the updated list
+
+# def id_generate():
+
+#     with open('id.json', 'r') as openfile:
+#         # Reading from json file
+#         id_obj = json.load(openfile)
+#         (id_obj)["ID"] = (id_obj)["ID"] + 1
+
+#     with open('id.json', 'w') as openfile:
+#         json.dump(id_obj, openfile, indent=4, separators=(',',': '))
+#     return ((id_obj)["ID"])
+
+# print(id_generate())
+
+
+  
+    # id_list =+ 
+    # id_list.append(new_data)
+    # fp.seek(0)
+    # json.dump(id_list, fp, indent=4, separators=(',',': '))
+
+# with open("sample.json", "w") as outfile:
+#     json.dump(dictionary, outfile)

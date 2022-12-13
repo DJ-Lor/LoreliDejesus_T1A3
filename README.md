@@ -95,3 +95,5 @@ Notes:
 3. Check that email is actually email provided
 4. Need to spit out client ID or property ID once added? 
 5. Check client price inputted is not a string
+6. ID generator for both client and property ID  - explain in readme
+7. dollar sign for property price and budget

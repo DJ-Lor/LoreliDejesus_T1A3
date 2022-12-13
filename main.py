@@ -1,6 +1,8 @@
 from property import Property
 from client import Client
 
+
+
 user_input = ""
 
 while True:

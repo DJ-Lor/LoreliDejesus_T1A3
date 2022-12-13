@@ -1,10 +1,10 @@
-from json_helper import write_json, remove_data_json, edit_data_json, search_prop_owner_data_json
+from json_helper import write_json, remove_data_json, edit_data_json, search_prop_owner_data_json, id_generate
 
 # "Database File Location"
 filename = 'property_list.json'
 
 class Property:
-    def __init__(self, suburb = '', price = 0, ID = 12345):
+    def __init__(self, suburb = '', price = 0, ID = id_generate()):
         self.ID = ID
         self.suburb = suburb
         self.price = price

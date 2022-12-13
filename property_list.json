@@ -18,5 +18,10 @@
         "ID": 141,
         "SUBURB": "Randwick",
         "PRICE": 650000
+    },
+    {
+        "ID": 1000032,
+        "suburb": "Little Bay",
+        "price": 33
     }
 ]

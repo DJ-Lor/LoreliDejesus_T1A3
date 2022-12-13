@@ -1,10 +1,10 @@
-from json_helper import write_json, remove_data_json, edit_data_json, search_client_prosprop_data_json
+from json_helper import write_json, remove_data_json, edit_data_json, search_client_prosprop_data_json, id_generate
 
 # "Database File Location"
 filename = 'client_list.json'
 
 class Client:
-    def __init__(self, name = '', email = '', suburb = '', price = 0, ID = 12345):
+    def __init__(self, name = '', email = '', suburb = '', price = 0, ID = id_generate()):
         self.ID = ID
         self.name = name
         self.email = email

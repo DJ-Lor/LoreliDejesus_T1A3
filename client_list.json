@@ -12,5 +12,12 @@
         "EMAIL": "david@gmail.com",
         "SUBURB": "Maroubra",
         "PRICE": 900000
+    },
+    {
+        "ID": 1000035,
+        "name": "Olivia",
+        "email": "olivia@g.com",
+        "suburb": "Bondi",
+        "price": 23
     }
 ]

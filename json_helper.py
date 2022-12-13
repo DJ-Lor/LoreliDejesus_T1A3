@@ -140,3 +140,17 @@ def search_prop_owner_data_json(ID, filename1= 'client_list.json', filename2 = '
         print(mcl)
 
 
+# ID generator for both client and property ID 
+def id_generate():
+
+    with open('id.json', 'r') as openfile:
+        # Reading from json file
+        id_obj = json.load(openfile)
+        (id_obj)["ID"] = (id_obj)["ID"] + 1
+
+    with open('id.json', 'w') as openfile:
+        json.dump(id_obj, openfile, indent=4, separators=(',',': '))
+    return ((id_obj)["ID"])
+
+print(id_generate())
+
