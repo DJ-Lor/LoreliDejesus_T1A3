@@ -55,6 +55,8 @@ while True:
             if confirm_action == "N":
                 print("No property data has been deleted. Please choose again from the following options")
                 continue
+    
+    # Exit option
         elif manage_prop_choice == "4":
             break
         else:
@@ -95,6 +97,8 @@ while True:
                 continue
             else:
                 break
+    
+    # Delete client details 
 
         elif manage_client_choice == "3":
             ID = int(input("Client ID: "))
@@ -113,6 +117,8 @@ while True:
             if confirm_action == "N":
                 print("No client data has been deleted. Please choose again from the following options")
                 continue
+
+    # Exit option
 
         elif manage_client_choice == "4":
             break
@@ -134,3 +140,17 @@ while True:
     else:
         print("INVALID ANSWER. Please choose a number from 1-4: ")
 
+
+
+#Enter client ID
+# #Pull up client information
+# #Match to the property list with property bondi for example - show 
+# #Pull up another one or exit
+
+#   {
+#         "ID": 12345,
+#         "NAME": "LDJ",
+#         "EMAIL": "david@gmail.com",
+#         "SUBURB": "Maroubra",
+#         "PRICE": "900000"
+#     }

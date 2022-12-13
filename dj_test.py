@@ -48,6 +48,11 @@ from client import Client
 # c3 = Client(ID)
 # c3.client_edit()
 
-ID = int(input("Property ID: "))
-p3 = Property(ID)
-p3.property_edit()
+# ID = int(input("Property ID: "))
+# p3 = Property(ID)
+# p3.property_edit()
+
+ID = int(input("Client ID: "))
+c4 = Client('', '', '', 0, ID)
+c4.client_search()
+   

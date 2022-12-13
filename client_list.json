@@ -1,6 +1,6 @@
 [
     {
-        "ID": 0,
+        "ID": 6789,
         "NAME": "David",
         "EMAIL": "david@gmail.com",
         "SUBURB": "Bondi",
@@ -11,6 +11,6 @@
         "NAME": "LDJ",
         "EMAIL": "david@gmail.com",
         "SUBURB": "Maroubra",
-        "PRICE": "900000"
+        "PRICE": 900000
     }
 ]

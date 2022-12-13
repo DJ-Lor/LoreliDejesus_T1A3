@@ -1,16 +1,21 @@
 [
     {
-        "ID": 0,
+        "ID": 246,
         "SUBURB": "Bondi",
-        "PRICE": 850000
+        "PRICE": 830000
     },
     {
-        "ID": 0,
+        "ID": 810,
+        "SUBURB": "Bondi",
+        "PRICE": 750000
+    },
+    {
+        "ID": 121,
         "SUBURB": "Coogee",
         "PRICE": 950000
     },
     {
-        "ID": 12345,
+        "ID": 141,
         "SUBURB": "Randwick",
         "PRICE": 650000
     }
