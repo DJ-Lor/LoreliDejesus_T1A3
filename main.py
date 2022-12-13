@@ -4,7 +4,7 @@ from client import Client
 user_input = ""
 
 while True:
-    user_input = input("Welcome to RealSeller App!\nPlease choose one between the following options:\n 1. Manage Property List\n 2. Manage Client List\n 3. Seller Portal\n 4. Exit\nWrite the number, ie '2' if you wanted to go to Manage Client List.\n Enter here: ")
+    user_input = input("Welcome to RealSeller App!\nPlease choose one between the following options:\n 1. Manage Property List\n 2. Manage Client List\n 3. Prospective Opportunity Portal\n 4. Exit\nWrite the number, ie '2' if you wanted to go to Manage Client List.\n Enter here: ")
 
     user_input = user_input.strip()
 
@@ -127,8 +127,8 @@ while True:
 
     # Prospective opportunities view for client and property owners
     elif user_input == "3":
-        seller_portal_choice = input("Check out prospective business opportunities. Please select preferred view:\n 1. Client ID\n 2. Property ID\n Enter here: ")
-        if seller_portal_choice == "1":
+        opp_portal_choice = input("Check out prospective business opportunities. Please select preferred view:\n 1. Client ID\n 2. Property ID\n Enter here: ")
+        if opp_portal_choice == "1":
             ID = int(input("Please input the client ID. Enter here: "))
             c4 = Client('', '', '', 0, ID)
             c4.client_search()
@@ -138,7 +138,7 @@ while True:
             else:
                 break
             
-        elif seller_portal_choice == "2":
+        elif opp_portal_choice == "2":
             ID = int(input("Please input the property ID. Enter here: "))
             p4 = Property('', 0, ID)
             p4.property_search()
