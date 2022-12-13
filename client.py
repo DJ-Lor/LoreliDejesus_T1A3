@@ -1,4 +1,4 @@
-from json_helper import write_json, remove_data_json, edit_data_json, search_data_json
+from json_helper import write_json, remove_data_json, edit_data_json, search_client_prosprop_data_json
 
 # "Database File Location"
 filename = 'client_list.json'
@@ -21,7 +21,7 @@ class Client:
         edit_data_json(self.ID, filename)
 
     def client_search(self):
-        search_data_json(self.ID)
+        search_client_prosprop_data_json(self.ID)
 
 
 

@@ -65,7 +65,7 @@ def edit_data_json(ID, filename):
 
 
 #  Search for client prospective properties based on location and price range and using client id entered
-def search_data_json(ID, filename1= 'client_list.json', filename2 = 'property_list.json'):
+def search_client_prosprop_data_json(ID, filename1= 'client_list.json', filename2 = 'property_list.json'):
     # Check if file exists
     if path.isfile(filename1) is False:
         raise Exception("File not found")
@@ -103,26 +103,40 @@ def search_data_json(ID, filename1= 'client_list.json', filename2 = 'property_li
         print(mtpr)
 
 
+#  Search for prospective clients for property owners based on location and price range and using property id entered
+def search_prop_owner_data_json(ID, filename1= 'client_list.json', filename2 = 'property_list.json'):
+    # Check if file exists
+    if path.isfile(filename1) is False:
+        raise Exception("File not found")
+    if path.isfile(filename2) is False:
+        raise Exception("File not found")
 
+    clients_list = []
+    with open(filename1, 'r') as fp:
+        clients_list = json.load(fp)
 
-    # found_property = None
-    # for pr in properties_list:
-    #     if pr["ID"] == ID:
-    #         found_property = pr
-    #         break
+    properties_list = []
+    with open(filename2, 'r') as fp2:
+        properties_list = json.load(fp2)
+
+    found_property = None
+    for pr in properties_list:
+        if pr["ID"] == ID:
+            found_property = pr
+            break
     
-    # if found_property is None:
-    #     raise Exception("Property not found")
+    if found_property is None:
+        raise Exception("Property not found")
 
-    # print(found_property)
+    print(found_property)
 
-    # matched_clients_list = []
-    # for cli in clients_list:
-    #     if (cli)["SUBURB"] == (found_property)["SUBURB"] and (cli)["PRICE"] <= (found_property)["PRICE"]:
-    #         matched_clients_list.append(cli)
+    matched_clients_list = []
+    for cli in clients_list:
+        if (cli)["SUBURB"] == (found_property)["SUBURB"] and (cli)["PRICE"] >= (found_property)["PRICE"]:
+            matched_clients_list.append(cli)
 
-    # print('Here are a lits of clients for you:')
-    # for mcl in matched_clients_list:
-    #     print(mcl)
+    print('Here are a lits of clients for you:')
+    for mcl in matched_clients_list:
+        print(mcl)
 
 

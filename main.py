@@ -125,8 +125,9 @@ while True:
         else:
             print("Invalid input. Please choose again")
 
+    # Prospective opportunities view for client and property owners
     elif user_input == "3":
-        seller_portal_choice = input("Would you like to enter the\n 1. Client ID\n 2. Property ID? ")
+        seller_portal_choice = input("Check out prospective business opportunities. Please select preferred view:\n 1. Client ID\n 2. Property ID\n Enter here: ")
         if seller_portal_choice == "1":
             ID = int(input("Please input the client ID. Enter here: "))
             c4 = Client('', '', '', 0, ID)
@@ -138,7 +139,15 @@ while True:
                 break
             
         elif seller_portal_choice == "2":
-            break
+            ID = int(input("Please input the property ID. Enter here: "))
+            p4 = Property('', 0, ID)
+            p4.property_search()
+            next_step = input("Would you like to go back to the 1. Main portal or 2. Exit?\n Choose a number. ")
+            if next_step == "1":
+                continue
+            else:
+                break
+
         else:
             print("Invalid input. Please choose again")
 
@@ -146,5 +155,5 @@ while True:
         break
 
     else:
-        print("INVALID ANSWER. Please choose a number from 1-4: ")
+        print("Invalid input. Please choose a number from 1-4: ")
 
