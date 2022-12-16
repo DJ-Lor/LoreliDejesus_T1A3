@@ -1,21 +1,181 @@
-**Real Estate Terminal App Idea (for Sellers) Pseudocode**
+# LoreliDejesus_T1A3 - Real Estate App Idea (for Sellers)
 
-*Functionalities*
+The *RealSeller* app is designed to aid sellers working in the real estate industry:
 
-***Main View***
-1. Options shown and require user input too choose
-* Manage Property List
-* Manage Client List
-* Prospective Opportunity Portal
-* Exit
+* To manage their growing Client and Property lists 
+* To increase efficiency by automating the Client-to-Property match (and vice versa) based on requirements specified
 
+With overall objective of increasing seller profitibaility through the help of the app. 
+
+____
+**R1: Answers to all the documentation requirements below.**
+
+Completed all R1-R8 notes with headers below.
+
+____
+
+**R2: Readme. separate heading for each documentation requirement and answers organised under the appropriate headings.**
+
+Completed all R1-R8 notes with headers below.
+
+___
+
+**R4: Provide full attribution to referenced sources (where applicable).**
+
+TBC 
+___
+
+**R4: Provide a link to your source control repository**
+
+[Loreli De Jesus Github Repository](https://github.com/DJ-Lor/LoreliDejesus_T1A3)
+
+[Loreli De Jesus Github Deck Presentation](https://github.com/DJ-Lor/LoreliDejesus_T1A3)
+___
+
+**R5: Identify any code style guide or styling conventions that the application will adhere to. Reference the chosen style guide appropriately.**
+
+TBC 
+
+___
+
+**R6: Develop a list of features that will be included in the application. It must include: (1) at least THREE features (2) describe each feature**
+
+
+1. Feature 1: Add a new Property or a Client to the current list
+
+    * There is a current list maintained in json file for each Client and Property list.
+
+    * There will be two main classes utilised, namely Client and Property classes.
+
+    * User input required for each detail (example: Suburb or Price) to be added to the file(json). Code handling will use the json import to utilise the file as intended. 
+
+    * There will be a Client or Property ID that will be generated. This will be explained in detail in the latter part of the readme document. 
+
+    * A confirmation of the new Client or Property details will be shown to the user and confirmed saved. This is utilising the classes for each. 
+
+    * Option asked if the user would like to go back to the main menu or exit. 
+
+2. Feature 2: Edit a current Property or a Client from the current list
+
+    * Editing a current list will utilise the import json functions to open, read and write on the file. 
+
+    * User input will utilise the Client of Property ID as the main identifier and required information to pull up the list that requires an edit. 
+
+    * A .capitalize() will be used for client inputs so it matches against the dictionary key to update.
+
+    * A confirmation of the update done will be displayed.
+
+    * Option asked if the user would like to go back to the main menu or exit. 
+
+
+3. Feature 3: Delete a current Property or a Client from the current list
+
+    * Deleting a current list will utilise the import json functions to open, read and write on the file. 
+
+    * User input will utilise the Client of Property ID as the main identifier and required information to pull up the list that requires deletion. 
+
+    * The Client or Property information will be displayed to confirm if the user would like to proceed with the deletion.
+
+    * A confirmation of the update done will be displayed.
+
+    * Option asked if the user would like to go back to the main menu or exit. 
+
+4. Feature 4: Prospective Opportunity Portal (Client-to-Property match (and vice versa) based on requirements specified
+
+    * Able to Pick a Client ID or Property ID and will provide a list of available opportunities(Properties/Clients) within the given requirements.
+
+    * Example 1: Inputted Client ID will output all the properties in that given suburb and priced less than or equal to that client's budget
+
+    * Example 2: Inputted Property ID will output all the properties in that given suburb and priced equal to or more than the property's selling price
+
+    * This feature will require the json import to open, read and write. 
+
+    * This feature will require the two json files (Client and Property) to interact via the matched IDs and display the required information. 
+
+
+5. Feature 5: Main Menu 
+
+    ***Main View***
+    
+    * Options shown and will require a user input to navigate the app 
+        * Manage Property List
+        * Manage Client List
+        * Prospective Opportunity Portal
+        * Exit
+    
+    * Navigating the terminal app experience requires usage of loops and conditional control statements in order to arrive to the chosen experience.
+
+    * The main menu also utilises error handling to ensure that the app does not crash when user input deviates from the options required as input. 
+
+
+6. Feature 6: ID generator 
+
+    * The unique identifier for each Property or Client on the json lists are the IDs. 
+
+    * The ID is 'auto-generated' via a function utilising a simple json file with a dictionary key ('ID') and a value int starting from 100 (without a range limit). 
+
+    * The code utilises the json import functions to interact with the file and add an increment of 1 for every new entry. 
+
+    * This is then utilised in the respective Client and Property classes. 
+
+    * Refer to code below: 
+
+    ``` python
+    def id_generate():
+
+    with open('json_files/id.json', 'r') as openfile:
+        # Reading from json file
+        id_obj = json.load(openfile)
+        (id_obj)["ID"] = (id_obj)["ID"]+1
+
+    with open('json_files/id.json', 'w') as openfile:
+        json.dump(id_obj, openfile, indent=4, separators=(',',': '))
+    return ((id_obj)["ID"])
+
+    def id_display():
+
+    with open('json_files/id.json', 'r') as openfile:
+        # Reading from json file
+        id_obj_r = json.load(openfile)
+        return id_obj_r["ID"]
+
+
+____
+
+**R7: Develop and utilise a suitable project management platform to track the app's implementation plan.**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+_____________
 ***Manage - Property List for sale***
 
-1. Current property list json file with the following header: Property ID (autogenerated), Suburb, Price 
+1. Current property list is a json file with the following header: Property ID (autogenerated), Suburb, Price 
 
 Example:
 
-```[
+``` json 
+[
     {
         "ID": 246,
         "SUBURB": "Bondi",
@@ -41,10 +201,11 @@ Example:
 
 2. User provided with option to add, edit or delete from the property list 
 
-3. Depending on chosen step, ask user input 
-* Add - ask each detail, autogenerated property ID, confirm added!
+3. Features: 
 
-* Edit - property ID required, pull up information, confirm which details to edit, summarise new version, save!
+* Feature 1: Add a Property - ask each detail, autogenerated property ID, confirm added!
+
+* Feature 2: With the property ID required, this will pull up information > confirm which details to edit > user input to edit > summarise new version > save!
 
 * Delete - property ID required, pull up information, pull up summary and confirm planned deletion, delete!
 

@@ -55,9 +55,10 @@ def edit_data_json(ID, filename):
     # Show elements from list
     for index, obj in enumerate(listObj):
         if obj["ID"] == ID:
-            edit = input(f"Which detail would you like to edit?\n {listObj[index]}\n Enter here: ")
+            edit = input(f"Which detail would you like to edit? \n {listObj[index]}\n Enter here: ")
             edit = edit.upper()
             new_value = input(f"Please enter the new {edit}: ")
+            new_value = new_value.capitalize()
             (listObj[index])[edit] = new_value
             print(f"{edit} updated to {new_value}!")
             
@@ -67,7 +68,7 @@ def edit_data_json(ID, filename):
 
 
 #  Search for client prospective properties based on location and price range and using client id entered
-def search_client_prosprop_data_json(ID, filename1= 'client_list.json', filename2 = 'property_list.json'):
+def search_client_prosprop_data_json(ID, filename1= 'json_files/client_list.json', filename2 = 'json_files/property_list.json'):
     # Check if file exists
     if path.isfile(filename1) is False:
         raise Exception("File not found")
@@ -100,13 +101,13 @@ def search_client_prosprop_data_json(ID, filename1= 'client_list.json', filename
         if (pr)["SUBURB"] == (found_client)["SUBURB"] and (pr)["PRICE"] <= (found_client)["PRICE"]:
             matched_properties_list.append(pr)
 
-    print('Here are a lits of properties for you:')
+    print('Here are a list of properties for you:')
     for mtpr in matched_properties_list:
         print(mtpr)
 
 
 #  Search for prospective clients for property owners based on location and price range and using property id entered
-def search_prop_owner_data_json(ID, filename1= 'client_list.json', filename2 = 'property_list.json'):
+def search_prop_owner_data_json(ID, filename1= 'json_files/client_list.json', filename2 = 'json_files/property_list.json'):
     # Check if file exists
     if path.isfile(filename1) is False:
         raise Exception("File not found")
@@ -137,7 +138,7 @@ def search_prop_owner_data_json(ID, filename1= 'client_list.json', filename2 = '
         if (cli)["SUBURB"] == (found_property)["SUBURB"] and (cli)["PRICE"] >= (found_property)["PRICE"]:
             matched_clients_list.append(cli)
 
-    print('Here are a lists of clients for you:')
+    print('Here are a list of clients for you:')
     for mcl in matched_clients_list:
         print(mcl)
 
@@ -145,21 +146,20 @@ def search_prop_owner_data_json(ID, filename1= 'client_list.json', filename2 = '
 # ID generator for both client and property ID 
 def id_generate():
 
-    with open('id.json', 'r') as openfile:
+    with open('json_files/id.json', 'r') as openfile:
         # Reading from json file
         id_obj = json.load(openfile)
         (id_obj)["ID"] = (id_obj)["ID"]+1
 
-    with open('id.json', 'w') as openfile:
+    with open('json_files/id.json', 'w') as openfile:
         json.dump(id_obj, openfile, indent=4, separators=(',',': '))
     return ((id_obj)["ID"])
-
 
 
 # Printing the ID once saved
 def id_display():
 
-    with open('id.json', 'r') as openfile:
+    with open('json_files/id.json', 'r') as openfile:
         # Reading from json file
         id_obj_r = json.load(openfile)
         return id_obj_r["ID"]

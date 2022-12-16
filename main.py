@@ -1,9 +1,6 @@
 from property import Property
 from client import Client
-from json_helper import id_display, check_email
-
-
-
+from helper import id_display, check_email
 
 user_input = ""
 
