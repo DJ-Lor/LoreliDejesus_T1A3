@@ -15,9 +15,16 @@
     },
     {
         "ID": 1000035,
-        "name": "Olivia",
-        "email": "olivia@g.com",
-        "suburb": "Bondi",
-        "price": 23
+        "NAME": "Olivia",
+        "EMAIL": "olivia@g.com",
+        "SUBURB": "Bondi",
+        "PRICE": 500000
+    },
+    {
+        "ID": 1000059,
+        "NAME": "Kate",
+        "EMAIL": "K@kate.com",
+        "SUBURB": "Bondi",
+        "PRICE": 700000
     }
 ]

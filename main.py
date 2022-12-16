@@ -1,5 +1,6 @@
 from property import Property
 from client import Client
+from json_helper import id_display
 
 
 
@@ -17,11 +18,12 @@ while True:
 
     # Add a new Property to the list
         if manage_prop_choice == "1":
-            suburb = input("Please enter the suburb of the new property: ") 
-            price = int(input("Please enter the selling price of the new property: "))
-            p1 = Property(suburb, price)
+            SUBURB = input("Please enter the suburb of the new property: ") 
+            PRICE = int(input("Please enter the selling price of the new property: "))
+            p1 = Property(SUBURB, PRICE)
             p1.property_save()
-            print(f"The new property located at {suburb} with a selling price of ${price} has been added!")
+            print(f"The new property located at {SUBURB} with a selling price of ${PRICE} has been added!")
+            print(f"Your property ID is {id_display()}!")
             next_step = input("Would you like to go back to the 1. Main portal or 2. Exit?\n Choose a number. ")
             if next_step == "1":
                 continue
@@ -75,14 +77,15 @@ while True:
 
     # Add a new client to the list 
         if manage_client_choice == "1":
-            name = input("Please enter the new client name: ")
-            email = input("Please enter the client's email address: ")
-            suburb = input("Please enter the client suburb of interest: ")
-            price = int(input("Please enter the client property budget: "))
+            NAME = input("Please enter the new client name: ")
+            EMAIL = input("Please enter the client's email address: ")
+            SUBURB = input("Please enter the client suburb of interest: ")
+            PRICE = int(input("Please enter the client property budget: "))
 
-            c1 = Client(name, email, suburb, price)
+            c1 = Client(NAME, EMAIL, SUBURB, PRICE)
             c1.client_save()
-            print(f"New client added!\n Client name: {name}\n Email: {email}\n Looking for property in: {suburb}\n Budget: ${price}\nIf this is incorrect, please go back to the main portal and follow the prompts to edit client details.")
+            print(f"New client added!\n Client name: {NAME}\n Email: {EMAIL}\n Looking for property in: {SUBURB}\n Budget: ${PRICE}\n Your client ID is {id_display()}!")
+            print("If this is incorrect, please go back to the main portal and follow the prompts to edit client details.")
             next_step = input("Would you like to go back to the 1. Main portal or 2. Exit?\n Choose a number. ")
             if next_step == "1":
                 continue
@@ -117,7 +120,7 @@ while True:
                     break
 
             if confirm_action == "N":
-                print("No client data has been deleted. Please choose again from the following options")
+                print("No client data has been deleted. Please choose again from the following options.")
                 continue
 
     # Exit option
@@ -134,7 +137,7 @@ while True:
             ID = int(input("Please input the client ID. Enter here: "))
             c4 = Client('', '', '', 0, ID)
             c4.client_search()
-            next_step = input("Would you like to go back to the 1. Main portal or 2. Exit?\n Choose a number. ")
+            next_step = input("Would you like to go back to the 1. Main portal or 2. Exit?\n Choose a number: ")
             if next_step == "1":
                 continue
             else:
@@ -144,14 +147,14 @@ while True:
             ID = int(input("Please input the property ID. Enter here: "))
             p4 = Property('', 0, ID)
             p4.property_search()
-            next_step = input("Would you like to go back to the 1. Main portal or 2. Exit?\n Choose a number. ")
+            next_step = input("Would you like to go back to the 1. Main portal or 2. Exit?\n Choose a number: ")
             if next_step == "1":
                 continue
             else:
                 break
 
         else:
-            print("Invalid input. Please choose again")
+            print("Invalid input. Please choose again.")
 
     elif user_input == "4":
         break

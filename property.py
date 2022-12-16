@@ -4,10 +4,10 @@ from json_helper import write_json, remove_data_json, edit_data_json, search_pro
 filename = 'property_list.json'
 
 class Property:
-    def __init__(self, suburb = '', price = 0, ID = id_generate()):
-        self.ID = ID
-        self.suburb = suburb
-        self.price = price
+    def __init__(self, SUBURB = '', PRICE = 0, ID = 0):
+        self.ID = id_generate()
+        self.SUBURB = SUBURB
+        self.PRICE = PRICE
   
     def property_save(self):
         write_json(self.__dict__, filename)

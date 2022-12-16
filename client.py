@@ -4,12 +4,13 @@ from json_helper import write_json, remove_data_json, edit_data_json, search_cli
 filename = 'client_list.json'
 
 class Client:
-    def __init__(self, name = '', email = '', suburb = '', price = 0, ID = id_generate()):
-        self.ID = ID
-        self.name = name
-        self.email = email
-        self.suburb = suburb
-        self.price = price
+
+    def __init__(self, NAME = '', EMAIL = '', SUBURB = '', PRICE = 0, ID = 0):
+        self.ID = id_generate()
+        self.NAME = NAME
+        self.EMAIL = EMAIL
+        self.SUBURB = SUBURB
+        self.PRICE = PRICE
   
     def client_save(self):
         write_json(self.__dict__, filename)
@@ -22,6 +23,10 @@ class Client:
 
     def client_search(self):
         search_client_prosprop_data_json(self.ID)
+
+    # def client_add_ID(self):
+    #     id_generate(self.__dict__)
+
 
 
 

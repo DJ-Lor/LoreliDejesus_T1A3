@@ -21,7 +21,17 @@
     },
     {
         "ID": 1000032,
-        "suburb": "Little Bay",
-        "price": 33
+        "SUBURB": "Little Bay",
+        "PRICE": 350000
+    },
+    {
+        "ID": 1000052,
+        "SUBURB": "La Perouse",
+        "PRICE": 450000
+    },
+    {
+        "ID": 1000591,
+        "SUBURB": "test",
+        "PRICE": 1234
     }
 ]

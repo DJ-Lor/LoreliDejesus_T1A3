@@ -135,7 +135,7 @@ def search_prop_owner_data_json(ID, filename1= 'client_list.json', filename2 = '
         if (cli)["SUBURB"] == (found_property)["SUBURB"] and (cli)["PRICE"] >= (found_property)["PRICE"]:
             matched_clients_list.append(cli)
 
-    print('Here are a lits of clients for you:')
+    print('Here are a lists of clients for you:')
     for mcl in matched_clients_list:
         print(mcl)
 
@@ -146,11 +146,21 @@ def id_generate():
     with open('id.json', 'r') as openfile:
         # Reading from json file
         id_obj = json.load(openfile)
-        (id_obj)["ID"] = (id_obj)["ID"] + 1
+        (id_obj)["ID"] = (id_obj)["ID"]+1
 
     with open('id.json', 'w') as openfile:
         json.dump(id_obj, openfile, indent=4, separators=(',',': '))
     return ((id_obj)["ID"])
 
-print(id_generate())
+
+
+
+# Printing the ID once saved
+def id_display():
+
+    with open('id.json', 'r') as openfile:
+        # Reading from json file
+        id_obj_r = json.load(openfile)
+        return id_obj_r["ID"]
+
 

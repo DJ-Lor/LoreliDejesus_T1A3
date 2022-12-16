@@ -97,3 +97,6 @@ Notes:
 5. Check client price inputted is not a string
 6. ID generator for both client and property ID  - explain in readme
 7. dollar sign for property price and budget
+9. No matched prop or client in search - out put Come back again note
+
+Davo says C1.ID self init should 
