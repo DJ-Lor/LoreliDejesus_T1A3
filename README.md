@@ -144,6 +144,17 @@ ____
 
 **R7: Develop and utilise a suitable project management platform to track the app's implementation plan.**
 
+* Utilised Trello's kanban approach by diving my tasks into main headers for (1) Features and (2) Admin related to development. 
+
+* In each column, the specific tasks are outlined along with the estimated deadline for completion. 
+
+* Target date of completion is located at the bottom right of each card. This is color coordinated. 
+
+    * Green means done
+    * Yellow means deadline is fast-approaching
+    * Red means deadline has passed and is delayed
+
+![Project Management Progress 1](docs/Trello_Screenshot_Progress_1.png)
 
 
 
