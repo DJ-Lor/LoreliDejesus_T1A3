@@ -5,8 +5,11 @@ filename = 'client_list.json'
 
 class Client:
 
-    def __init__(self, NAME = '', EMAIL = '', SUBURB = '', PRICE = 0, ID = 0):
-        self.ID = id_generate()
+    def __init__(self, NAME = '', EMAIL = '', SUBURB = '', PRICE = 0, ID = None):
+        if ID == None:
+            self.ID = id_generate()
+        else:
+            self.ID = ID
         self.NAME = NAME
         self.EMAIL = EMAIL
         self.SUBURB = SUBURB

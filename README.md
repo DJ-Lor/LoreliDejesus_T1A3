@@ -88,15 +88,43 @@ Example:
 
 * Example 2: Inputted Property ID will output all the properties in that given suburb and priced equal to or more than the property's selling price
 
+***Client and Property ID***
+
+1. This is utilising a json file that increments by 1 for each new property or client list generated. This starts from 100 and without a range limit.
+
+```
+# ID generator for both client and property ID 
+def id_generate():
+
+    with open('id.json', 'r') as openfile:
+        # Reading from json file
+        id_obj = json.load(openfile)
+        (id_obj)["ID"] = (id_obj)["ID"]+1
+
+    with open('id.json', 'w') as openfile:
+        json.dump(id_obj, openfile, indent=4, separators=(',',': '))
+    return ((id_obj)["ID"])
+
+
+
+
+# Printing the ID once saved
+def id_display():
+
+    with open('id.json', 'r') as openfile:
+        # Reading from json file
+        id_obj_r = json.load(openfile)
+        return id_obj_r["ID"]
+
+```
+
 
 Notes:
 1. Can only enter name for client
 2. Can only input one suburb
 3. Check that email is actually email provided
-4. Need to spit out client ID or property ID once added? 
 5. Check client price inputted is not a string
-6. ID generator for both client and property ID  - explain in readme
 7. dollar sign for property price and budget
 9. No matched prop or client in search - out put Come back again note
+10. enter text instead of property price and iny
 
-Davo says C1.ID self init should 

@@ -4,8 +4,11 @@ from json_helper import write_json, remove_data_json, edit_data_json, search_pro
 filename = 'property_list.json'
 
 class Property:
-    def __init__(self, SUBURB = '', PRICE = 0, ID = 0):
-        self.ID = id_generate()
+    def __init__(self, SUBURB = '', PRICE = 0, ID = None):
+        if ID == None:
+            self.ID = id_generate()
+        else:
+            self.ID = ID
         self.SUBURB = SUBURB
         self.PRICE = PRICE
   

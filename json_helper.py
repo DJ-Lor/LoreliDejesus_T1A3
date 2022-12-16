@@ -1,5 +1,7 @@
 import json
 from os import path
+from email_validator import validate_email, EmailNotValidError
+ 
 
 # function to add to JSON
 def write_json(new_data, filename):
@@ -154,7 +156,6 @@ def id_generate():
 
 
 
-
 # Printing the ID once saved
 def id_display():
 
@@ -164,3 +165,15 @@ def id_display():
         return id_obj_r["ID"]
 
 
+# Email Validator
+def check_email(email):
+    try:
+      # validate and get info
+        v = validate_email(email)
+        # replace with normalized form
+        email = v["email"] 
+        return True
+    except EmailNotValidError as e:
+        # email is not valid, exception message is human-readable
+        # print(str(e))
+        return False

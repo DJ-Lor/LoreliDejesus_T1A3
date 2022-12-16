@@ -1,6 +1,7 @@
 from property import Property
 from client import Client
-from json_helper import id_display
+from json_helper import id_display, check_email
+
 
 
 
@@ -33,7 +34,7 @@ while True:
     # Edit a current Property from the list
         elif manage_prop_choice == "2":
             ID = int(input("Property ID: "))
-            p3 = Property(ID)
+            p3 = Property('', 0, ID)
             p3.property_edit()
             next_step = input("Would you like to go back to the 1. Main portal or 2. Exit?\n Choose a number. ")
             if next_step == "1":
@@ -78,7 +79,12 @@ while True:
     # Add a new client to the list 
         if manage_client_choice == "1":
             NAME = input("Please enter the new client name: ")
+
             EMAIL = input("Please enter the client's email address: ")
+            while(check_email(EMAIL) == False) :
+                print('Invalid email. Please try again.')
+                EMAIL = input("Please enter the client's email address: ")
+
             SUBURB = input("Please enter the client suburb of interest: ")
             PRICE = int(input("Please enter the client property budget: "))
 
