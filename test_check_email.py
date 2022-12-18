@@ -1,4 +1,4 @@
-from helper_files.helper import check_email
+from helper import check_email
 
 # Mock email to test different conventions that may be entered by the user when adding a new client detail: Email
 def test_check_email():

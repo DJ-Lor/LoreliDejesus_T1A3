@@ -1,7 +1,7 @@
 #Import my property class that has CRUD functions
 from property import Property
 from client import Client
-from helper_files.helper import id_generate, id_display, next_step
+from helper import id_generate, id_display, next_step
 import json
 from os import path
 

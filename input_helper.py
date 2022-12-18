@@ -2,15 +2,16 @@ from email_validator import validate_email, EmailNotValidError
  
 # Input ID 
 def capture_id():
-    input_id = int(input('Enter ID: '))
+    
     while True:
         try:
+            input_id = int(input('Enter ID: '))
             if input_id < 100:
                 raise
+            break
         except:
             print('Invalid input. Please enter the correct ID')
-            input_id = int(input("Please enter ID: "))
-        return input_id
+    return input_id
 
 
 # Input name function and error handling
@@ -41,6 +42,7 @@ def capture_email():
     while(check_email(input_email) == False) :
         print('Invalid email. Please try again.')
         input_email = input("Please enter the client's email address: ")
+    return input_email
 
 
 # Input suburb function and error handling
@@ -54,14 +56,15 @@ def capture_suburb():
 
 # Input price function and error handling
 def capture_price():
-    input_price = int(input("Please enter the property price/budget: "))
+    
     while True:
         try:
-            if int(input_price) <= 500000:
-                raise
-        except:
-            print('Error. Please enter a property value equal or above $500,000.')
             input_price = int(input("Please enter the property price/budget: "))
-        return input_price
+            break
+
+        except ValueError:
+            print('Invalid Input. Please enter an integer and try again.')
+
+    return input_price
 
 

@@ -61,7 +61,7 @@ ___
 
     * User input will utilise the Client of Property ID as the main identifier and required information to pull up the list that requires an edit. 
 
-    * A .capitalize() will be used for client inputs so it matches against the dictionary key to update.
+    * A .lower() will be used for client inputs so it matches against the dictionary key to update (which are all in lower case).
 
     * A confirmation of the update done will be displayed.
 
@@ -105,14 +105,14 @@ ___
     
     * Navigating the terminal app experience requires usage of loops and conditional control statements in order to arrive to the chosen experience.
 
-    * The main menu also utilises error handling to ensure that the app does not crash when user input deviates from the options required as input. 
+    * The main menu also utilises error handling through the input_helper.py file to ensure that the app does not crash when user input deviates from the options required as input. 
 
 
 6. Feature 6: ID generator 
 
     * The unique identifier for each Property or Client on the json lists are the IDs. 
 
-    * The ID is 'auto-generated' via a function utilising a simple json file with a dictionary key ('ID') and a value int starting from 100 (without a range limit). 
+    * The ID is 'auto-generated' via a function utilising a simple json file with a dictionary key ('id') and a value int starting from 100 (without a range limit). 
 
     * The code utilises the json import functions to interact with the file and add an increment of 1 for every new entry. 
 
@@ -126,18 +126,12 @@ ___
     with open('json_files/id.json', 'r') as openfile:
         # Reading from json file
         id_obj = json.load(openfile)
-        (id_obj)["ID"] = (id_obj)["ID"]+1
+        (id_obj)["id"] = (id_obj)["id"]+1
 
     with open('json_files/id.json', 'w') as openfile:
         json.dump(id_obj, openfile, indent=4, separators=(',',': '))
-    return ((id_obj)["ID"])
-
-    def id_display():
-
-    with open('json_files/id.json', 'r') as openfile:
-        # Reading from json file
-        id_obj_r = json.load(openfile)
-        return id_obj_r["ID"]
+    return ((id_obj)["id"])
+    ```
 
 
 ____
@@ -188,24 +182,24 @@ Example:
 ``` json 
 [
     {
-        "ID": 246,
-        "SUBURB": "Bondi",
-        "PRICE": 830000
+        "id": 104,
+        "suburb": "Coogee",
+        "price": "840000"
     },
     {
-        "ID": 810,
-        "SUBURB": "Bondi",
-        "PRICE": 750000
+        "id": 105,
+        "suburb": "Bondi",
+        "price": 750000
     },
     {
-        "ID": 121,
-        "SUBURB": "Coogee",
-        "PRICE": 950000
+        "id": 106,
+        "suburb": "Coogee",
+        "price": 950000
     },
     {
-        "ID": 141,
-        "SUBURB": "Randwick",
-        "PRICE": 650000
+        "id": 107,
+        "suburb": "bondi",
+        "price": 650000
     }
 ]
 ```
@@ -299,3 +293,8 @@ Notes:
 12. ../ should i change
 13. should everything be under venv folder 
 14. Only property prices 500K and up
+15. added the clear terminal input 
+
+Review
+ID not present in the list 
+ID not allowable to be edited 

@@ -1,22 +1,37 @@
 [
     {
-        "id": 104,
-        "suburb": "Coogee",
-        "price": "840000"
-    },
-    {
         "id": 105,
-        "suburb": "Bondi",
-        "price": 750000
+        "suburb": "bondi",
+        "price": "900000"
     },
     {
         "id": 106,
-        "suburb": "Coogee",
+        "suburb": "coogee",
         "price": 950000
     },
     {
         "id": 107,
         "suburb": "bondi",
         "price": 650000
+    },
+    {
+        "id": 142,
+        "suburb": "coogee",
+        "price": 800000
+    },
+    {
+        "id": 143,
+        "suburb": "coogee",
+        "price": 950000
+    },
+    {
+        "id": 144,
+        "suburb": "Coogee",
+        "price": 888000
+    },
+    {
+        "id": 146,
+        "suburb": "Coogee",
+        "price": 550000
     }
 ]

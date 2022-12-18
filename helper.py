@@ -1,5 +1,5 @@
 import json
-from os import path
+from os import path, system
 from email_validator import validate_email, EmailNotValidError
  
 
@@ -185,9 +185,9 @@ def check_email(email):
 
 
 # Next Step 
-
 def next_step():
     next_step = input("Would you like to go back to the 1. Main portal or 2. Exit?\n Choose a number: ")
     if next_step == "2":
+        system('cls||clear')
         print("Good bye!")           
         exit()

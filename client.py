@@ -5,8 +5,8 @@ filename = 'json_files/client_list.json'
 
 class Client:
 
-    def __init__(self, name = '', email = '', suburb = '', price = 0, ID = None):
-        if ID == None:
+    def __init__(self, name = '', email = '', suburb = '', price = 0, id = None):
+        if id == None:
             self.id = id_generate()
         else:
             self.id = id
