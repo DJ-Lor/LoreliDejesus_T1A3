@@ -294,11 +294,8 @@ def id_display():
 Notes:
 1. Can only enter name for client
 2. Can only input one suburb
-3. Check that email is actually email provided
-5. Check client price inputted is not a string
-9. No matched prop or client in search - out put Come back again note
 10. enter text instead of property price and iny
 11. Gitignore
 12. ../ should i change
 13. should everything be under venv folder 
-
+14. Only property prices 500K and up

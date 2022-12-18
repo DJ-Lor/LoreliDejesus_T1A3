@@ -1,32 +1,22 @@
 [
     {
-        "ID": 104,
-        "SUBURB": "Coogee",
-        "PRICE": "840000"
+        "id": 104,
+        "suburb": "Coogee",
+        "price": "840000"
     },
     {
-        "ID": 105,
-        "SUBURB": "Bondi",
-        "PRICE": 750000
+        "id": 105,
+        "suburb": "Bondi",
+        "price": 750000
     },
     {
-        "ID": 106,
-        "SUBURB": "Coogee",
-        "PRICE": 950000
+        "id": 106,
+        "suburb": "Coogee",
+        "price": 950000
     },
     {
-        "ID": 107,
-        "SUBURB": "Randwick",
-        "PRICE": 650000
-    },
-    {
-        "ID": 108,
-        "SUBURB": "Little Bay",
-        "PRICE": 350000
-    },
-    {
-        "ID": 109,
-        "SUBURB": "La Perouse",
-        "PRICE": 450000
+        "id": 107,
+        "suburb": "bondi",
+        "price": 650000
     }
 ]

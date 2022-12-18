@@ -20,7 +20,7 @@ def write_json(new_data, filename):
         fp.seek(0)
         json.dump(listObj, fp, indent=4, separators=(',',': '))
 
-def remove_data_json(ID, filename):
+def remove_data_json(id, filename):
     # Check if file exists
     if path.isfile(filename) is False:
         raise Exception("File not found")
@@ -32,7 +32,7 @@ def remove_data_json(ID, filename):
 
     # Remove element from list
     for index, obj in enumerate(listObj):
-        if obj["ID"] == ID:
+        if obj["id"] == id:
             listObj.pop(index)
             break
     
@@ -42,7 +42,7 @@ def remove_data_json(ID, filename):
 
 
 
-def edit_data_json(ID, filename):
+def edit_data_json(id, filename):
     # Check if file exists
     if path.isfile(filename) is False:
         raise Exception("File not found")
@@ -54,11 +54,11 @@ def edit_data_json(ID, filename):
 
     # Show elements from list
     for index, obj in enumerate(listObj):
-        if obj["ID"] == ID:
+        if obj["id"] == id:
             edit = input(f"Which detail would you like to edit? \n {listObj[index]}\n Enter here: ")
-            edit = edit.upper()
+            edit = edit.lower()
             new_value = input(f"Please enter the new {edit}: ")
-            new_value = new_value.capitalize()
+            new_value = new_value.lower()
             (listObj[index])[edit] = new_value
             print(f"{edit} updated to {new_value}!")
             
@@ -68,7 +68,7 @@ def edit_data_json(ID, filename):
 
 
 #  Search for client prospective properties based on location and price range and using client id entered
-def search_client_prosprop_data_json(ID, filename1= 'json_files/client_list.json', filename2 = 'json_files/property_list.json'):
+def search_client_prosprop_data_json(id, filename1= 'json_files/client_list.json', filename2 = 'json_files/property_list.json'):
     # Check if file exists
     if path.isfile(filename1) is False:
         raise Exception("File not found")
@@ -82,7 +82,7 @@ def search_client_prosprop_data_json(ID, filename1= 'json_files/client_list.json
 
     found_client = None
     for cli in clients_list:
-        if cli["ID"] == ID:
+        if cli["id"] == id:
             found_client = cli
             break
     
@@ -98,16 +98,19 @@ def search_client_prosprop_data_json(ID, filename1= 'json_files/client_list.json
         
     matched_properties_list = []
     for pr in properties_list:
-        if (pr)["SUBURB"] == (found_client)["SUBURB"] and (pr)["PRICE"] <= (found_client)["PRICE"]:
+        if (pr)["suburb"] == (found_client)["suburb"] and (pr)["price"] <= (found_client)["price"]:
             matched_properties_list.append(pr)
 
-    print('Here are a list of properties for you:')
-    for mtpr in matched_properties_list:
-        print(mtpr)
+    if len(matched_properties_list) == 0:
+        print("Sorry. There is no match at the moment.")
+    else:
+        print('Here are a list of properties for you:')
+        for mtpr in matched_properties_list:
+            print(mtpr)
 
 
 #  Search for prospective clients for property owners based on location and price range and using property id entered
-def search_prop_owner_data_json(ID, filename1= 'json_files/client_list.json', filename2 = 'json_files/property_list.json'):
+def search_prop_owner_data_json(id, filename1= 'json_files/client_list.json', filename2 = 'json_files/property_list.json'):
     # Check if file exists
     if path.isfile(filename1) is False:
         raise Exception("File not found")
@@ -124,7 +127,7 @@ def search_prop_owner_data_json(ID, filename1= 'json_files/client_list.json', fi
 
     found_property = None
     for pr in properties_list:
-        if pr["ID"] == ID:
+        if pr["id"] == id:
             found_property = pr
             break
     
@@ -135,14 +138,14 @@ def search_prop_owner_data_json(ID, filename1= 'json_files/client_list.json', fi
 
     matched_clients_list = []
     for cli in clients_list:
-        if (cli)["SUBURB"] == (found_property)["SUBURB"] and (cli)["PRICE"] >= (found_property)["PRICE"]:
+        if (cli)["suburb"] == (found_property)["suburb"] and (cli)["price"] >= (found_property)["price"]:
             matched_clients_list.append(cli)
 
-    print('Here are a list of clients for you:')
-    for mcl in matched_clients_list:
-        if mcl == None:
-            print("Sorry. There is no match at the moment.")
-        else:
+    if len(matched_clients_list) == 0:
+        print("Sorry. There is no match at the moment.")
+    else:
+        print('Here are a list of clients for you:')
+        for mcl in matched_clients_list:
             print(mcl)
 
 # ID generator for both client and property ID 
@@ -151,11 +154,11 @@ def id_generate():
     with open('json_files/id.json', 'r') as openfile:
         # Reading from json file
         id_obj = json.load(openfile)
-        (id_obj)["ID"] = (id_obj)["ID"]+1
+        (id_obj)["id"] = (id_obj)["id"]+1
 
     with open('json_files/id.json', 'w') as openfile:
         json.dump(id_obj, openfile, indent=4, separators=(',',': '))
-    return ((id_obj)["ID"])
+    return ((id_obj)["id"])
 
 
 # Printing the ID once saved
@@ -164,7 +167,7 @@ def id_display():
     with open('json_files/id.json', 'r') as openfile:
         # Reading from json file
         id_obj_r = json.load(openfile)
-        return id_obj_r["ID"]
+        return id_obj_r["id"]
 
 
 # Email Validator

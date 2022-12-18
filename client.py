@@ -5,30 +5,28 @@ filename = 'json_files/client_list.json'
 
 class Client:
 
-    def __init__(self, NAME = '', EMAIL = '', SUBURB = '', PRICE = 0, ID = None):
+    def __init__(self, name = '', email = '', suburb = '', price = 0, ID = None):
         if ID == None:
-            self.ID = id_generate()
+            self.id = id_generate()
         else:
-            self.ID = ID
-        self.NAME = NAME
-        self.EMAIL = EMAIL
-        self.SUBURB = SUBURB
-        self.PRICE = PRICE
+            self.id = id
+        self.name = name
+        self.email = email
+        self.suburb = suburb
+        self.price = price
   
     def client_save(self):
         write_json(self.__dict__, filename)
     
     def client_remove(self):
-        remove_data_json(self.ID, filename)
+        remove_data_json(self.id, filename)
     
     def client_edit(self):
-        edit_data_json(self.ID, filename)
+        edit_data_json(self.id, filename)
 
     def client_search(self):
-        search_client_prosprop_data_json(self.ID)
+        search_client_prosprop_data_json(self.id)
 
-    # def client_add_ID(self):
-    #     id_generate(self.__dict__)
 
 
 
