@@ -1,7 +1,7 @@
 #Import my property class that has CRUD functions
 from property import Property
 from client import Client
-from helper import id_generate, id_display
+from helper import id_generate, id_display, next_step
 import json
 from os import path
 
@@ -99,7 +99,7 @@ from os import path
 # c4.client_search()
 
 
-print(id_display())
+print(next_step())
 
 
 

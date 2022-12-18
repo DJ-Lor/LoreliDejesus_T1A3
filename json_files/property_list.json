@@ -28,20 +28,5 @@
         "ID": 109,
         "SUBURB": "La Perouse",
         "PRICE": 450000
-    },
-    {
-        "ID": 110,
-        "SUBURB": "test",
-        "PRICE": 1234
-    },
-    {
-        "ID": 112,
-        "SUBURB": "test",
-        "PRICE": 111
-    },
-    {
-        "ID": 113,
-        "SUBURB": "halooo",
-        "PRICE": 134
     }
 ]

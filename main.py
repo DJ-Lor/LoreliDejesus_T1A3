@@ -1,6 +1,6 @@
 from property import Property
 from client import Client
-from helper import id_display, check_email
+from helper import id_display, check_email, next_step
 
 user_input = ""
 
@@ -22,22 +22,15 @@ while True:
             p1.property_save()
             print(f"The new property located at {SUBURB} with a selling price of ${PRICE} has been added!")
             print(f"Your property ID is {id_display()}!")
-            next_step = input("Would you like to go back to the 1. Main portal or 2. Exit?\n Choose a number. ")
-            if next_step == "1":
-                continue
-            else:
-                break
+            next_step()
+            
 
     # Edit a current Property from the list
         elif manage_prop_choice == "2":
             ID = int(input("Property ID: "))
             p3 = Property('', 0, ID)
             p3.property_edit()
-            next_step = input("Would you like to go back to the 1. Main portal or 2. Exit?\n Choose a number. ")
-            if next_step == "1":
-                continue
-            else:
-                break
+            next_step()
 
     # Delete a current Property from the list 
         elif manage_prop_choice == "3":
@@ -48,11 +41,7 @@ while True:
                 p2 = Property(ID)
                 p2.property_remove()
                 print(f"Property {ID} has been deleted!")
-                next_step = input("Would you like to go back to the 1. Main portal or 2. Exit?\n Choose a number: ")
-                if next_step == "1":
-                    continue
-                else:
-                    break
+                next_step()
 
             if confirm_action == "N":
                 print("No property data has been deleted. Please choose again from the following options")
@@ -89,22 +78,14 @@ while True:
             c1.client_save()
             print(f"New client added!\n Client name: {NAME}\n Email: {EMAIL}\n Looking for property in: {SUBURB}\n Budget: ${PRICE}\n Your client ID is {id_display()}!")
             print("If this is incorrect, please go back to the main portal and follow the prompts to edit client details.")
-            next_step = input("Would you like to go back to the 1. Main portal or 2. Exit?\n Choose a number. ")
-            if next_step == "1":
-                continue
-            else:
-                break
+            next_step()
 
     # Edit client details
         elif manage_client_choice == "2":
             ID = int(input("Client ID: "))
             c3 = Client(ID)
             c3.client_edit()
-            next_step = input("Would you like to go back to the 1. Main portal or 2. Exit?\n Choose a number. ")
-            if next_step == "1":
-                continue
-            else:
-                break
+            next_step()
     
     # Delete client details 
 
@@ -116,11 +97,7 @@ while True:
                 c2 = Client(ID)
                 c2.client_remove()
                 print(f"Client {ID} has been deleted!")
-                next_step = input("Would you like to go back to the 1. Main portal or 2. Exit?\n Choose a number: ")
-                if next_step == "1":
-                    continue
-                else:
-                    break
+                next_step()
 
             if confirm_action == "N":
                 print("No client data has been deleted. Please choose again from the following options.")
@@ -140,26 +117,19 @@ while True:
             ID = int(input("Please input the client ID. Enter here: "))
             c4 = Client('', '', '', 0, ID)
             c4.client_search()
-            next_step = input("Would you like to go back to the 1. Main portal or 2. Exit?\n Choose a number: ")
-            if next_step == "1":
-                continue
-            else:
-                break
+            next_step()
             
         elif opp_portal_choice == "2":
             ID = int(input("Please input the property ID. Enter here: "))
             p4 = Property('', 0, ID)
             p4.property_search()
-            next_step = input("Would you like to go back to the 1. Main portal or 2. Exit?\n Choose a number: ")
-            if next_step == "1":
-                continue
-            else:
-                break
+            next_step()
 
         else:
             print("Invalid input. Please choose again.")
 
     elif user_input == "4":
+        print("Good bye!")
         break
 
     else:

@@ -296,7 +296,9 @@ Notes:
 2. Can only input one suburb
 3. Check that email is actually email provided
 5. Check client price inputted is not a string
-7. dollar sign for property price and budget
 9. No matched prop or client in search - out put Come back again note
 10. enter text instead of property price and iny
+11. Gitignore
+12. ../ should i change
+13. should everything be under venv folder 
 

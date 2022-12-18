@@ -140,8 +140,10 @@ def search_prop_owner_data_json(ID, filename1= 'json_files/client_list.json', fi
 
     print('Here are a list of clients for you:')
     for mcl in matched_clients_list:
-        print(mcl)
-
+        if mcl == None:
+            print("Sorry. There is no match at the moment.")
+        else:
+            print(mcl)
 
 # ID generator for both client and property ID 
 def id_generate():
@@ -177,3 +179,12 @@ def check_email(email):
         # email is not valid, exception message is human-readable
         # print(str(e))
         return False
+
+
+# Next Step 
+
+def next_step():
+    next_step = input("Would you like to go back to the 1. Main portal or 2. Exit?\n Choose a number: ")
+    if next_step == "2":
+        print("Good bye!")           
+        exit()
