@@ -149,9 +149,12 @@ ____
     * Red means deadline has passed and is delayed
 
 ![Project Management Progress 1](docs/Trello_Screenshot_Progress_1.png)
+![Project Management Progress 2](docs/Trello_Screenshot_Progress_2.png)
 
 
+_____
 
+**R8: Design help documentation which includes a set of instructions which accurately describe how to use and install the application.**
 
 
 
@@ -298,3 +301,10 @@ Notes:
 Review
 ID not present in the list 
 ID not allowable to be edited 
+
+
+incorrect
+1. I can add made up keys in editing
+2. deleting - deletes ids not part of it
+3. are you sure you want to delete - can answer number and it shouldny
+4. list the headers 

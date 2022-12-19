@@ -1,7 +1,7 @@
 from property import Property
 from client import Client
 from helper import id_display, next_step
-from input_helper import capture_name, capture_email, capture_suburb, capture_price, capture_id
+from input_helper import capture_name, capture_email, capture_suburb, capture_price, capture_id, capture_confirm_action
 import os
 
 
@@ -42,12 +42,11 @@ while True:
     # Delete a current Property from the list 
         elif manage_prop_choice == "3":
             id = capture_id()
-            confirm_action = input(f"Are you sure you want to delete property {id} from the list? Y/N:  ")
-            confirm_action = confirm_action.capitalize()
+            confirm_action = capture_confirm_action()
+
             if confirm_action == "Y":
-                p2 = Property(id)
+                p2 = Property('', 0, id)
                 p2.property_remove()
-                print(f"Property {id} has been deleted!")
                 next_step()
                 os.system('cls||clear')
 
@@ -68,6 +67,7 @@ while True:
         user_input = user_input.strip()
         manage_client_choice = input("What would you like to do?\n 1. Add a new client\n 2. Edit current client details on the list\n 3. Delete a client on the list\n 4. Exit\n Please enter a number: ")
         manage_client_choice = manage_client_choice.strip()
+        os.system('cls||clear')
 
     # Add a new client to the list 
         if manage_client_choice == "1":
@@ -77,6 +77,7 @@ while True:
             price = capture_price()
             c1 = Client(name, email, suburb, price)
             c1.client_save()
+            os.system('cls||clear')
             print(f"New client added!\n Client name: {name}\n Email: {email}\n Looking for property in: {suburb}\n Budget: ${price}\n Your client ID is {id_display()}!")
             print("If this is incorrect, please go back to the main portal and follow the prompts to edit client details.")
             next_step()
@@ -85,7 +86,7 @@ while True:
     # Edit client details
         elif manage_client_choice == "2":
             id = capture_id()
-            c3 = Client('', 0, id)
+            c3 = Client('','','', 0, id)
             c3.client_edit()
             next_step()
             os.system('cls||clear')
@@ -93,18 +94,18 @@ while True:
     # Delete client details 
         elif manage_client_choice == "3":
             id = capture_id()
-            confirm_action = input(f"Are you sure you want to delete client {id} from the list? Y/N:  ")
-            confirm_action = confirm_action.capitalize()
+            confirm_action = capture_confirm_action()
+            
             if confirm_action == "Y":
-                c2 = Client(id)
+                c2 = Client('','','', 0, id)
                 c2.client_remove()
-                print(f"Client {id} has been deleted!")
                 next_step()
                 os.system('cls||clear')
             
-            if confirm_action == "N":
+            elif confirm_action == "N":
                 print("No client data has been deleted. Please choose again from the following options.")
                 continue
+
 
     # Exit option
 

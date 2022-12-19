@@ -1,13 +1,8 @@
 [
     {
         "id": 105,
-        "suburb": "bondi",
+        "suburb": "randwick",
         "price": "900000"
-    },
-    {
-        "id": 106,
-        "suburb": "coogee",
-        "price": 950000
     },
     {
         "id": 107,
@@ -31,6 +26,21 @@
     },
     {
         "id": 146,
+        "suburb": "Coogee",
+        "price": 550000
+    },
+    {
+        "id": 155,
+        "suburb": "Maroubra",
+        "price": 650000
+    },
+    {
+        "id": 159,
+        "suburb": "Maroubra",
+        "price": 550000
+    },
+    {
+        "id": 165,
         "suburb": "Coogee",
         "price": 550000
     }

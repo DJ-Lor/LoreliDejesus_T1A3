@@ -4,6 +4,7 @@ from client import Client
 from helper import id_generate, id_display, next_step
 import json
 from os import path
+from input_helper import capture_confirm_action
 
 # # Ask for user input
 # suburb = input("Please enter the suburb of the new property: ")
@@ -147,3 +148,11 @@ from os import path
 #             print(mcl)
 
     
+capture_confirm_action()
+# onfired_action = 'n'
+
+# if onfired_action != "Y":
+#     print('not Y')
+# else:
+#     print('correct')
+

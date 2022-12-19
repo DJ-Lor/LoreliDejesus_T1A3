@@ -1,4 +1,7 @@
 from email_validator import validate_email, EmailNotValidError
+from client import Client
+from helper import next_step
+import os
  
 # Input ID 
 def capture_id():
@@ -68,3 +71,19 @@ def capture_price():
     return input_price
 
 
+# Input deletion confirmation and error handling 
+
+def capture_confirm_action():
+    while True:
+        confirmed_action = input(f"Are you sure you want to delete above ID from the list? Y/N: ")
+        confirmed_action = confirmed_action.capitalize()
+      
+        if confirmed_action == 'Y' or confirmed_action == 'N':
+            break
+        else:
+            print('Invalid input. Choose between Y or N. Try again')
+
+    return confirmed_action
+
+ 
+         

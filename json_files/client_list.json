@@ -1,24 +1,10 @@
 [
     {
-        "id": 100,
-        "name": "david",
-        "email": "david@gmail.com",
-        "suburb": "bondi",
-        "price": 830000
-    },
-    {
         "id": 101,
         "name": "ldj",
         "email": "david@gmail.com",
-        "suburb": "maroubra",
+        "suburb": "Bronte",
         "price": 900000
-    },
-    {
-        "id": 102,
-        "name": "olivia",
-        "email": "olivia@g.com",
-        "suburb": "bondi",
-        "price": 500000
     },
     {
         "id": 103,
@@ -33,5 +19,19 @@
         "email": "m@livy.com",
         "suburb": "coogee",
         "price": 780000
+    },
+    {
+        "id": 167,
+        "name": "lo",
+        "email": "l@gmail.com",
+        "suburb": "Bronte",
+        "price": 120000
+    },
+    {
+        "id": 168,
+        "name": "Shadow",
+        "email": "shadow@gmail.com",
+        "suburb": "Clovelly",
+        "price": 700000
     }
 ]
