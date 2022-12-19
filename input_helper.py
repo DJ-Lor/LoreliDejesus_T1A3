@@ -1,7 +1,4 @@
 from email_validator import validate_email, EmailNotValidError
-from client import Client
-from helper import next_step
-import os
  
 # Input ID 
 def capture_id():
