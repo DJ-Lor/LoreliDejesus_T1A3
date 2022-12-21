@@ -1,0 +1,11 @@
+{
+    "launch": {
+
+    
+        "configurations": [],
+        "compounds": []
+    },
+    "python.linting.enabled": true,
+    "python.linting.pycodestyleEnabled": true,
+    "python.linting.lintOnSave": true
+}
