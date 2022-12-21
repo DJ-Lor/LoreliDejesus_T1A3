@@ -48,5 +48,10 @@
         "id": 172,
         "suburb": "bondi",
         "price": 560000
+    },
+    {
+        "id": 173,
+        "suburb": "bondi",
+        "price": 550000
     }
 ]

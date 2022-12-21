@@ -17,9 +17,11 @@ def capture_id():
 # Input name function and error handling
 def capture_name():
     input_name = input('Please enter the new client name: ')
+    input_name = input_name.lower()
     while (len(input_name) <= 1):
         print('Invalid name. Please try again.')
         input_name = input('Please enter the new client name: ') 
+        input_name = input_name.lower()
     return input_name
 
 
@@ -48,10 +50,13 @@ def capture_email():
 # Input suburb function and error handling
 def capture_suburb():
     input_suburb = input('Please enter the suburb name: ')
+    input_suburb = input_suburb.lower()
     while (len(input_suburb) <= 3):
         print('Invalid name. Please try again.')
-        input_suburb = input('Please enter the suburb name: ')    
+        input_suburb = input('Please enter the suburb name: ')
+        input_suburb = input_suburb.lower()    
     return input_suburb
+   
 
 
 # Input price function and error handling
@@ -61,7 +66,7 @@ def capture_price():
         try:
             input_price = int(input('Please enter the property price/budget: '))
             break
-        
+
         except ValueError:
             print('Invalid Input. Please enter an integer and try again.')
 
