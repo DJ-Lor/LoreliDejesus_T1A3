@@ -61,7 +61,7 @@ def edit_data_json(id, filename):
     # Show elements from list
     for index, obj in enumerate(list_obj):
         if obj['id'] == id:
-            print('Which detail would you like to edit?\n {list_obj[index]}')
+            print(f'Which detail would you like to edit?\n {list_obj[index]}')
             edit = input('Enter here: ')
             edit = edit.lower()
             if (edit == 'suburb' or edit == 'price'

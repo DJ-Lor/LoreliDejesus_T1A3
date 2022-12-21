@@ -141,7 +141,7 @@ and follow the prompts to edit client details.""")
 
     # Prospective opportunities view for client and property owners
     elif user_input == '3':
-        opp_portal_choice = input("""Check out prospective business opportunities. 
+        opp_portal_choice = input("""Check out prospective opportunities.
 Please select preferred view:
 1. Client ID
 2. Property ID
