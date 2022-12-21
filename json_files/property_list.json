@@ -2,17 +2,12 @@
     {
         "id": 105,
         "suburb": "randwick",
-        "price": "900000"
+        "price": "890000"
     },
     {
         "id": 107,
         "suburb": "bondi",
         "price": 650000
-    },
-    {
-        "id": 142,
-        "suburb": "coogee",
-        "price": 800000
     },
     {
         "id": 143,
@@ -21,27 +16,37 @@
     },
     {
         "id": 144,
-        "suburb": "Coogee",
+        "suburb": "coogee",
         "price": 888000
     },
     {
         "id": 146,
-        "suburb": "Coogee",
+        "suburb": "coogee",
         "price": 550000
     },
     {
         "id": 155,
-        "suburb": "Maroubra",
+        "suburb": "maroubra",
         "price": 650000
     },
     {
         "id": 159,
-        "suburb": "Maroubra",
+        "suburb": "maroubra",
         "price": 550000
     },
     {
         "id": 165,
-        "suburb": "Coogee",
+        "suburb": "coogee",
         "price": 550000
+    },
+    {
+        "id": 169,
+        "suburb": "bronte",
+        "price": 200000
+    },
+    {
+        "id": 172,
+        "suburb": "bondi",
+        "price": 560000
     }
 ]

@@ -3,7 +3,7 @@
         "id": 101,
         "name": "ldj",
         "email": "david@gmail.com",
-        "suburb": "Bronte",
+        "suburb": "bronte",
         "price": 900000
     },
     {
@@ -24,14 +24,28 @@
         "id": 167,
         "name": "lo",
         "email": "l@gmail.com",
-        "suburb": "Bronte",
+        "suburb": "bronte",
         "price": 120000
     },
     {
         "id": 168,
         "name": "Shadow",
         "email": "shadow@gmail.com",
-        "suburb": "Clovelly",
+        "suburb": "clovelly",
         "price": 700000
+    },
+    {
+        "id": 170,
+        "name": "Kate",
+        "email": "kate@gmail.com",
+        "suburb": "coogee",
+        "price": 1000000
+    },
+    {
+        "id": 171,
+        "name": "Jack",
+        "email": "j@gmail.com",
+        "suburb": "randwick",
+        "price": 799000
     }
 ]

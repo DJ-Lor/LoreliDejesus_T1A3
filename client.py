@@ -1,6 +1,6 @@
 from helper import write_json, remove_data_json, edit_data_json, search_client_prosprop_data_json, id_generate
 
-# "Database File Location"
+# 'Database File Location'
 filename = 'json_files/client_list.json'
 
 class Client:

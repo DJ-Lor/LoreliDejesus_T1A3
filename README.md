@@ -5,7 +5,7 @@ The *RealSeller* app is designed to aid sellers working in the real estate indus
 * To manage their growing Client and Property lists 
 * To increase efficiency by automating the Client-to-Property match (and vice versa) based on requirements specified
 
-With overall objective of increasing seller profitibaility through the help of the app. 
+With overall objective of increasing seller profitability through the help of the app. 
 
 ____
 **R1: Answers to all the documentation requirements below.**
@@ -43,6 +43,8 @@ ___
 
 1. Feature 1: Add a new Property or a Client to the current list
 
+    * The ability to add a new Property or Client details to the current json file list.  
+
     * There is a current list maintained in json file for each Client and Property list.
 
     * There will be two main classes utilised, namely Client and Property classes.
@@ -57,11 +59,19 @@ ___
 
 2. Feature 2: Edit a current Property or a Client from the current list
 
+    * The ability to edit current Property or Client details from the json file list.  
+
     * Editing a current list will utilise the import json functions to open, read and write on the file. 
 
     * User input will utilise the Client of Property ID as the main identifier and required information to pull up the list that requires an edit. 
 
-    * A .lower() will be used for client inputs so it matches against the dictionary key to update (which are all in lower case).
+    * Only the following options are editable per file:
+
+            - Client_list.json header = name, email, suburb, price 
+            - Property_list.json header = suburb, price 
+
+
+    * A .lower() will be used for inputs so it matches against the dictionary key to update (which are all in lower case).
 
     * A confirmation of the update done will be displayed.
 
@@ -69,6 +79,8 @@ ___
 
 
 3. Feature 3: Delete a current Property or a Client from the current list
+
+    * The ability to delete a current Property or Client from the current json file list.  
 
     * Deleting a current list will utilise the import json functions to open, read and write on the file. 
 
@@ -90,7 +102,7 @@ ___
 
     * This feature will require the json import to open, read and write. 
 
-    * This feature will require the two json files (Client and Property) to interact via the matched IDs and display the required information. 
+    * This feature will require the two json files (client_list.json and property_list.json) to interact via the matched IDs and display the required information. In the instance of no matches, the program will specify that there are no matches. 
 
 
 5. Feature 5: Main Menu 
@@ -105,12 +117,12 @@ ___
     
     * Navigating the terminal app experience requires usage of loops and conditional control statements in order to arrive to the chosen experience.
 
-    * The main menu also utilises error handling through the input_helper.py file to ensure that the app does not crash when user input deviates from the options required as input. 
+    * The main menu also utilises error handling through the helper.py and input_helper.py file to ensure that the app does not crash when user input deviates from the options required as input. 
 
 
 6. Feature 6: ID generator 
 
-    * The unique identifier for each Property or Client on the json lists are the IDs. 
+    * The unique identifier for each Property or Client on the json lists.
 
     * The ID is 'auto-generated' via a function utilising a simple json file with a dictionary key ('id') and a value int starting from 100 (without a range limit). 
 
@@ -205,7 +217,7 @@ Getting Started with RealSeller App!
 * General guideline
 
     * Only one entry can be done at a time. This means that if there is more than one Property or Client wanting to be added(or edited or deleted), this will have to be done one at a time. 
-    
+
 
 * Choosing an option from the menu.
 
@@ -294,12 +306,8 @@ Notes:
 11. Gitignore
 12. ../ should i change
 13. should everything be under venv folder 
-14. Only property prices 500K and up
-15. added the clear terminal input 
+14. suburb . lower () doesnt work
 
 
 
-incorrect
-1. I can add made up keys in editing
 
-4. list the headers 

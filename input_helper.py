@@ -16,10 +16,10 @@ def capture_id():
 
 # Input name function and error handling
 def capture_name():
-    input_name = input("Please enter the new client name: ")
+    input_name = input('Please enter the new client name: ')
     while (len(input_name) <= 1):
         print('Invalid name. Please try again.')
-        input_name = input("Please enter the new client name: ")
+        input_name = input('Please enter the new client name: ') 
     return input_name
 
 
@@ -29,7 +29,7 @@ def check_email(email):
       # validate and get info
         v = validate_email(email)
         # replace with normalized form
-        email = v["email"] 
+        email = v['email'] 
         return True
     except EmailNotValidError as e:
         # email is not valid, exception message is human-readable
@@ -38,19 +38,19 @@ def check_email(email):
 
 # Input email function and error handling
 def capture_email():
-    input_email = input("Please enter the client's email address: ")
+    input_email = input('Please enter the client email address: ')
     while(check_email(input_email) == False) :
         print('Invalid email. Please try again.')
-        input_email = input("Please enter the client's email address: ")
+        input_email = input('Please enter the client email address: ')
     return input_email
 
 
 # Input suburb function and error handling
 def capture_suburb():
-    input_suburb = input("Please enter the suburb name: ")
+    input_suburb = input('Please enter the suburb name: ')
     while (len(input_suburb) <= 3):
         print('Invalid name. Please try again.')
-        input_suburb = input("Please enter the suburb name: ")
+        input_suburb = input('Please enter the suburb name: ')    
     return input_suburb
 
 
@@ -59,9 +59,9 @@ def capture_price():
     
     while True:
         try:
-            input_price = int(input("Please enter the property price/budget: "))
+            input_price = int(input('Please enter the property price/budget: '))
             break
-
+        
         except ValueError:
             print('Invalid Input. Please enter an integer and try again.')
 
@@ -72,7 +72,7 @@ def capture_price():
 
 def capture_confirm_action():
     while True:
-        confirmed_action = input(f"Are you sure you want to delete above ID from the list? Y/N: ")
+        confirmed_action = input(f'Are you sure you want to delete above ID from the list? Y/N: ')
         confirmed_action = confirmed_action.capitalize()
       
         if confirmed_action == 'Y' or confirmed_action == 'N':
