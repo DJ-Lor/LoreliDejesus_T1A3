@@ -11,7 +11,7 @@ def capture_id():
             if input_id < 100:
                 raise
             break
-        except:
+        except ValueError:
             print('Invalid input. Please enter the correct ID')
     return input_id
 
@@ -30,7 +30,7 @@ def capture_name():
 # Email Validator
 def check_email(email):
     try:
-      # validate and get info
+        # validate and get info
         v = validate_email(email)
         # replace with normalized form
         email = v['email']
@@ -45,7 +45,7 @@ def check_email(email):
 
 def capture_email():
     input_email = input('Please enter the client email address: ')
-    while (check_email(input_email) == False):
+    while (check_email(input_email) is False):
         print('Invalid email. Please try again.')
         input_email = input('Please enter the client email address: ')
     return input_email

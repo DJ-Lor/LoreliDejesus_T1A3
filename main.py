@@ -2,20 +2,32 @@ import os
 from property import Property
 from client import Client
 from helper import id_display, next_step
-from input_helper import capture_name, capture_email, capture_suburb, capture_price, capture_id, capture_confirm_action
+from input_helper import capture_name, capture_email, capture_suburb,\
+     capture_price, capture_id, capture_confirm_action
 
 
 user_input = ''
 
 while True:
-    user_input = input('Welcome to RealSeller App!\nPlease choose one between the following options:\n 1. Manage Property List\n 2. Manage Client List\n 3. Prospective Opportunity Portal\n 4. Exit\nWrite the number, ie "2" if you wanted to go to Manage Client List.\n Enter here: ')
+    user_input = input("""Welcome to RealSeller App!
+Please choose one between the following options:
+1. Manage Property List
+2. Manage Client List
+3. Prospective Opportunity Portal
+4. Exit
+Write the number, ie "2" if you wanted to go to Manage Client List.
+Enter here: """)
     user_input = user_input.strip()
     os.system('cls||clear')
 
     # Manage Property option
     if user_input == '1':
-        manage_prop_choice = input(
-            'What would you like to do?\n 1. Add a new property to list\n 2. Edit a current property on the list\n 3. Delete a property on the list\n 4. Exit\n Please enter a number: ')
+        manage_prop_choice = input("""What would you like to do?
+1. Add a new property to list
+2. Edit a current property on the list
+3. Delete a property on the list
+4. Exit
+Please enter a number: """)
         manage_prop_choice = manage_prop_choice.strip()
         os.system('cls||clear')
 
@@ -27,8 +39,7 @@ while True:
             p1 = Property(suburb, price)
             p1.property_save()
             os.system('cls||clear')
-            print(
-                f'The new property located at {suburb} with a selling price of ${price} has been added!')
+            print(f'Property in {suburb} priced at ${price} has been added!')
             print(f'Your property ID is {id_display()}!')
             next_step()
             os.system('cls||clear')
@@ -53,8 +64,7 @@ while True:
                 os.system('cls||clear')
 
             if confirm_action == 'N':
-                print(
-                    'No property data has been deleted. Please choose again from the following options')
+                print('No property deleted. Please choose again')
                 continue
 
     # Exit option
@@ -68,8 +78,12 @@ while True:
 
     elif user_input == '2':
         user_input = user_input.strip()
-        manage_client_choice = input(
-            'What would you like to do?\n 1. Add a new client\n 2. Edit current client details on the list\n 3. Delete a client on the list\n 4. Exit\n Please enter a number: ')
+        manage_client_choice = input("""What would you like to do?
+1. Add a new client
+2. Edit current client details on the list
+3. Delete a client on the list
+4. Exit
+Please enter a number: """)
         manage_client_choice = manage_client_choice.strip()
         os.system('cls||clear')
 
@@ -83,9 +97,14 @@ while True:
             c1 = Client(name, email, suburb, price)
             c1.client_save()
             os.system('cls||clear')
-            print(
-                f'New client added!\n Client name: {name}\n Email: {email}\n Looking for property in: {suburb}\n Budget: ${price}\n Your client ID is {id_display()}!')
-            print('If this is incorrect, please go back to the main portal and follow the prompts to edit client details.')
+            print('New client added!')
+            print(f'Client name: {name}')
+            print(f'Email: {email}')
+            print(f'Looking for property in: {suburb}')
+            print(f'Budget: ${price}')
+            print(f'Your new client ID is {id_display()}!')
+            print("""If this is incorrect, please go back to the main portal
+and follow the prompts to edit client details.""")
             next_step()
             os.system('cls||clear')
 
@@ -109,8 +128,7 @@ while True:
                 os.system('cls||clear')
 
             elif confirm_action == 'N':
-                print(
-                    'No client data has been deleted. Please choose again from the following options.')
+                print('No client deleted. Please choose again')
                 continue
 
     # Exit option
@@ -123,8 +141,11 @@ while True:
 
     # Prospective opportunities view for client and property owners
     elif user_input == '3':
-        opp_portal_choice = input(
-            'Check out prospective business opportunities. Please select preferred view:\n 1. Client ID\n 2. Property ID\n Enter here: ')
+        opp_portal_choice = input("""Check out prospective business opportunities. 
+Please select preferred view:
+1. Client ID
+2. Property ID
+Enter here: """)
         if opp_portal_choice == '1':
             id = capture_id()
             c4 = Client('', '', '', 0, id)
