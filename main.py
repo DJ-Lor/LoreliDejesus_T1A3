@@ -1,8 +1,9 @@
+import os
 from property import Property
 from client import Client
 from helper import id_display, next_step
 from input_helper import capture_name, capture_email, capture_suburb, capture_price, capture_id, capture_confirm_action
-import os
+
 
 
 user_input = ''
