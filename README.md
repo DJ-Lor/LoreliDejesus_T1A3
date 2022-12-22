@@ -22,7 +22,14 @@ ___
 
 **R4: Provide full attribution to referenced sources (where applicable).**
 
-TBC 
+References correctly referenced in this README and in the Deck Presentation.
+
+- CS Dojo (2018). Introduction to Classes and Objects - Part 1 (Data Structures & Algorithms #3). Retrieved on the 21st of December 2022 from https://www.youtube.com/watch?v=8yjkWGRlUmY
+
+- Nyingi, J. (2019) Setting Up PEP8 and Pylint on VS Code. Retrieved on the 21st of December 2022 from https://dev.to/j0nimost/setting-up-pep8-and-pylint-on-vs-code-34h
+
+- Van Rossum, G., Warsaw, B. and Coghlan, N. (2011). PEP 8 – Style Guide for Python Code. Retrieved on the 21st of December 2022 from https://peps.python.org/pep-0008/
+
 ___
 
 **R4: Provide a link to your source control repository**
@@ -34,7 +41,25 @@ ___
 
 **R5: Identify any code style guide or styling conventions that the application will adhere to. Reference the chosen style guide appropriately.**
 
-TBC 
+For my coding development, I utilised the PEP8 style guide Guido van Rossum, Barry Warsaw and Nick Coghlan (https://peps.python.org/pep-0008/). Consistency is key and I ensured that I remained consistent in my coding and utilised the style guidelines. A summary of the specific guidelines I followed in my code are as follows:
+
+- Indentation and Spacing: Used 4 spaces per indentation level. No extra white spaces in place where they do not need to be. Surround top-level function and class definitions with two blank lines.
+
+- Maximum line length: Limited all lines to a maximum of 79 characters. This is to ensure that different window views are able to maximise readability for my code. 
+
+- Imports: Imports are grouped in the following order: standard library imports, related third party imports.Local application/library specific imports.
+
+- Naming conventions: followed the lower_case_with_underscores structure and a capital letter start for class names. 
+
+- Try & Except: When catching exceptions, I mentioned specific exceptions whenever possible instead of using a bare except.
+
+- Boolean comparison: used 'is' vs '==', so for example instead of saying 'if x == True', I wrote it as 'if x is True'
+
+- Consistent use of '' for the required code (vs " "). 
+
+- Very long input: Utilised """ """ to work around spacing and ensuring I abide with the 79 character maximum line length. 
+
+As additional step, I utilised pylint package to highlight and identifying programming errors that do not abide with the PEP8 style. (https://code.visualstudio.com/docs/python/linting). 
 
 ___
 
@@ -304,10 +329,6 @@ Getting Started with RealSeller App!
 Notes:
 
 11. Gitignore
-12. ../ should i change
 13. should everything be under venv folder 
-14. suburb . lower () doesnt work
-
-
 
 

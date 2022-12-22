@@ -86,8 +86,8 @@ def edit_data_json(id, filename):
 #  Search for client prospective properties based on location and price range \
 # and using client id entered
 def search_client_prosprop_data_json(id,
-                                     filename1='json_files/client_list.json',
-                                     filename2='json_files/property_list.json'
+                                     filename1='./json_files/client_list.json',
+                                     filename2='./json_files/property_list.json'
                                      ):
     # Check if file exists
     if path.isfile(filename1) is False:
@@ -133,8 +133,8 @@ def search_client_prosprop_data_json(id,
 #  Search for prospective clients for property owners based on location and\
 #  price range and using property id entered
 def search_prop_owner_data_json(id,
-                                filename1='json_files/client_list.json',
-                                filename2='json_files/property_list.json'):
+                                filename1='./json_files/client_list.json',
+                                filename2='./json_files/property_list.json'):
     # Check if file exists
     if path.isfile(filename1) is False:
         raise Exception('File not found')
