@@ -216,9 +216,18 @@ _____
     
     - To unzip the entire folder, right-click to select Extract All > choose a folder to unzip the folder to.
     - For Mac, double-click the . zip file. The unzipped item appears in the same folder as the . zip file.
-    - **NOTE:** Remember the file path on where the unzipped folder is located. This will be used for step #3. 
+    
+3. Follow the steps below: 
 
-3. Open your terminal application in Mac or powershell in Windows. 
+   a. Open the unzipped LoreliDejesus_T1A3 folder 
+
+   b. Open src folder
+
+   c. Open LoreliDejesus_T1A3 folder
+
+   d. **NOTE:** Remember the file path location. This will be used for step #4. 
+
+4. Open your terminal application in Mac or powershell in Windows. 
 
     a. For Mac
          
@@ -236,7 +245,7 @@ _____
        
      - Other options to open Powershell refer to https://www.howtogeek.com/662611/9-ways-to-open-powershell-in-windows-10/
 
-4. From the terminal/powershell command line, proceed to the LoreliDejesus_T1A3 project directory through the command below. **You will need to be in this directory in order for the application to run.**
+5. From the terminal/powershell command line, proceed to the LoreliDejesus_T1A3 project directory through the command below. **You will need to be in this directory in order for the application to run.**
 
         cd <insert file path>
  
@@ -247,16 +256,16 @@ _____
 
     To read more about folder file paths, please refer to https://macosx-faq.com/change-directory-terminal/
 
-5. You will know you are in the directory when the command line updates the rightmost text to the folder name you are going to, i.e. LoreliDejesus_T1A3
+6. You will know you are in the directory when the command line updates the rightmost text to the folder name you are going to, i.e. LoreliDejesus_T1A3
 
         user@user-MacBook-Pro LoreliDejesus_T1A3 % 
 
 
-6. Once you are in this folder, you are able to execute the application to run by running this code in your command line. 
+7. Once you are in this folder, you are able to execute the application to run by running this code in your command line. 
 
         ./run_app.sh   
 
-7. You are now ready to use the application! You should see the below in your command line. 
+8. You are now ready to use the application! You should see the below in your command line. 
 
         Welcome to RealSeller App!
         Please choose one between the following options:
@@ -267,8 +276,6 @@ _____
         Write the number, ie "2" if you wanted to go to Manage Client List.
         Enter here: 
 
-
-8. Enjoy! 
 
 **TROUBLESHOOTING**
 
