@@ -326,9 +326,5 @@ Getting Started with RealSeller App!
 
 
 
-Notes:
-
-11. Gitignore
-13. should everything be under venv folder 
 
 
