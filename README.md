@@ -189,9 +189,12 @@ ____
     * Yellow means deadline is fast-approaching
     * Red means deadline has passed and is delayed
 
+* The screenshots below refer to the work in progress development plan as I tick of the to do list through the 2 weeks of working on the terminal app. The 4th screenshot showing all timelines in green, hence, project completed. 
+
 ![Project Management Progress 1](docs/trello_screenshot_progress_1.png)
 ![Project Management Progress 2](docs/trello_screenshot_progress_2.png)
 ![Project Management Progress 3](docs/trello_screenshot_progress_3.png)
+![Project Management Progress 4](docs/trello_screenshot_progress_4.png)
 
 _____
 
