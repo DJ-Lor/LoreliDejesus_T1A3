@@ -189,9 +189,9 @@ ____
     * Yellow means deadline is fast-approaching
     * Red means deadline has passed and is delayed
 
-![Project Management Progress 1](docs/Trello_Screenshot_Progress_1.png)
-![Project Management Progress 2](docs/Trello_Screenshot_Progress_2.png)
-![Project Management Progress 3](docs/Trello_Screenshot_Progress_3.png)
+![Project Management Progress 1](docs/trello_screenshot_progress_1.png)
+![Project Management Progress 2](docs/trello_screenshot_progress_2.png)
+![Project Management Progress 3](docs/trello_screenshot_progress_3.png)
 
 _____
 
@@ -277,7 +277,8 @@ _____
 
 * The correct terminal folder structure is required to ensure that the terminal app will work accordingly. Refer to the screenshot below: 
 
-TBC
+![Project Folder](docs/project_folder.png)
+
 
 * The terminal app utilises a list of json files located in json_files folder (client_list.json, property_list.json, id.json) and will need these files in order for the app to function correctly. 
 
