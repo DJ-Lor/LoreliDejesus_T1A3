@@ -38,9 +38,9 @@ ___
 
 **R4: Provide a link to your source control repository**
 
-[Loreli De Jesus Github Repository](https://github.com/DJ-Lor/LoreliDejesus_T1A3)
+[Github Repository - Loreli De Jesus](https://github.com/DJ-Lor/LoreliDejesus_T1A3)
 
-[Loreli De Jesus Github Deck Presentation](https://github.com/DJ-Lor/LoreliDejesus_T1A3)
+[Slide Deck Presentation - Loreli De Jesus](https://youtu.be/0HXEhNovx2c)
 ___
 
 **R5: Identify any code style guide or styling conventions that the application will adhere to. Reference the chosen style guide appropriately.**
@@ -191,9 +191,10 @@ ____
 
 * The screenshots below refer to the work in progress development plan as I tick of the to do list through the 2 weeks of working on the terminal app. The 4th screenshot showing all timelines in green, hence, project completed. 
 
-![Project Management Progress 1](docs/trello_screenshot_progress_1.png)
-![Project Management Progress 2](docs/trello_screenshot_progress_2.png)
-![Project Management Progress 3](docs/trello_screenshot_progress_3.png)
+
+![Project Management Progress 4](docs/trello_screenshot_progress_1.png)
+![Project Management Progress 4](docs/trello_screenshot_progress_2.png)
+![Project Management Progress 4](docs/trello_screenshot_progress_3.png)
 ![Project Management Progress 4](docs/trello_screenshot_progress_4.png)
 
 _____
