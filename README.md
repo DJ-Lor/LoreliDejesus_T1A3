@@ -187,7 +187,7 @@ ____
 
 ![Project Management Progress 1](docs/Trello_Screenshot_Progress_1.png)
 ![Project Management Progress 2](docs/Trello_Screenshot_Progress_2.png)
-
+![Project Management Progress 3](docs/Trello_Screenshot_Progress_3.png)
 
 _____
 
