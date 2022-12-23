@@ -1,6 +1,7 @@
 import json
 from os import path, system
 from email_validator import validate_email, EmailNotValidError
+from input_helper import capture_price
 
 
 # function to add to JSON
@@ -64,13 +65,20 @@ def edit_data_json(id, filename):
             print(f'Which detail would you like to edit?\n {list_obj[index]}')
             edit = input('Enter here: ')
             edit = edit.lower()
-            if (edit == 'suburb' or edit == 'price'
-                    or edit == 'name' or edit == 'email'):
+            if (edit == 'suburb' or edit == 'name' or edit == 'email'):
                 new_value = input(f'Please enter the new {edit}: ')
                 new_value = new_value.lower()
                 (list_obj[index])[edit] = new_value
                 print(f'{edit} updated to {new_value}!')
                 has_edited = True
+
+            elif (edit == 'price'):
+                # new_value = int(input(f'Please enter the new {edit}: '))
+                new_value = capture_price()
+                (list_obj[index])[edit] = new_value
+                print(f'{edit} updated to {new_value}!')
+                has_edited = True
+
             else:
                 print('Invalid answer, not part of the editable options')
                 has_edited = True
