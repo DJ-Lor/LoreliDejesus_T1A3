@@ -26,7 +26,11 @@ References correctly referenced in this README and in the Deck Presentation.
 
 - CS Dojo (2018). Introduction to Classes and Objects - Part 1 (Data Structures & Algorithms #3). Retrieved on the 21st of December 2022 from https://www.youtube.com/watch?v=8yjkWGRlUmY
 
+- Gavin, B. (2020). 9 Ways to Open PowerShell in Windows 10. Retrieved on the 22nd of December 2022 from https://www.howtogeek.com/662611/9-ways-to-open-powershell-in-windows-10/
+
 - Nyingi, J. (2019) Setting Up PEP8 and Pylint on VS Code. Retrieved on the 21st of December 2022 from https://dev.to/j0nimost/setting-up-pep8-and-pylint-on-vs-code-34h
+
+- Writtenhouse (2022) 6 simple ways to open Terminal on Mac. Retrieved on the 22nd of December 2022 from https://www.idownloadblog.com/2019/04/19/ways-open-terminal-mac/
 
 - Van Rossum, G., Warsaw, B. and Coghlan, N. (2011). PEP 8 – Style Guide for Python Code. Retrieved on the 21st of December 2022 from https://peps.python.org/pep-0008/
 
@@ -197,9 +201,79 @@ _____
 
 **1. Steps to install the application**
 
-TBC
+**INSTALLATION** 
+
+1. Download the *LoreliDejesus_T1A3.zip* to your local computer. 
+
+2. Unzip the downloaded LoreliDejesus_T1A3 project folder. 
+    
+    - To unzip the entire folder, right-click to select Extract All > choose a folder to unzip the folder to.
+    - For Mac, double-click the . zip file. The unzipped item appears in the same folder as the . zip file.
+    - **NOTE:** Remember the file path on where the unzipped folder is located. This will be used for step #3. 
+
+3. Open your terminal application in Mac or powershell in Windows. 
+
+    a. For Mac
+         
+    - If you have the Spotlight Search button in your menu bar, click it. Otherwise, you can use the keyboard shortcut Command + Space.
+         
+    - Type in “Terminal.”
+         
+    - You should see the Terminal application under Top Hit at the top of your results. Double-click it and Terminal will open.
+         
+    - Other options via Finder or Applications Folder refer to https://www.idownloadblog.com/2019/04/19/ways-open-terminal-mac/
+    
+    b. For Windows
+    
+     - To open PowerShell from this menu, press Windows+X, and then click “Windows PowerShell” or “Windows PowerShell (Admin).
+       
+     - Other options to open Powershell refer to https://www.howtogeek.com/662611/9-ways-to-open-powershell-in-windows-10/
+
+4. From the terminal/powershell command line, proceed to the LoreliDejesus_T1A3 project directory through the command below. **You will need to be in this directory in order for the application to run.**
+
+        cd <insert file path>
+ 
+    Note: Remember where you saved the project folder from step #2. For example, if I saved LoreliDejesus_T1A3 project folder in my downloads folder, I will enter below on the command line. 
+
+        cd /Users/user/downloads/LoreliDejesus_T1A3
+
+
+    To read more about folder file paths, please refer to https://macosx-faq.com/change-directory-terminal/
+
+5. You will know you are in the directory when the command line updates the rightmost text to the folder name you are going to, i.e. LoreliDejesus_T1A3
+
+        user@user-MacBook-Pro LoreliDejesus_T1A3 % 
+
+
+6. Once you are in this folder, you are able to execute the application to run by running this code in your command line. 
+
+        ./run_app.sh   
+
+7. You are now ready to use the application! You should see the below in your command line. 
+
+        Welcome to RealSeller App!
+        Please choose one between the following options:
+        1. Manage Property List
+        2. Manage Client List
+        3. Prospective Opportunity Portal
+        4. Exit
+        Write the number, ie "2" if you wanted to go to Manage Client List.
+        Enter here: 
+
+
+8. Enjoy! 
+
+**TROUBLESHOOTING**
+
+            If you encounter any difficulties using the terminal, 
+            reference the Troubleshooting details below. If you find any 
+            bugs or have a feature request, please feel free to reach out 
+            to product@realsellerapp.com.au.
+
 
 **2. Any dependencies required by the application to operate**
+
+* Application needs to be run in the project folder. 
 
 * The correct terminal folder structure is required to ensure that the terminal app will work accordingly. Refer to the screenshot below: 
 
